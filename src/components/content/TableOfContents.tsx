@@ -21,7 +21,7 @@ export function TableOfContents({ html }: TableOfContentsProps) {
           >
             <a
               href={`#${heading.id}`}
-              className="text-sm text-gray-600 hover:text-blue-600"
+              className="text-sm text-gray-600 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:text-blue-600 focus-visible:underline"
             >
               {heading.text}
             </a>

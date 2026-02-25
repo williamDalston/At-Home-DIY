@@ -8,6 +8,7 @@ import { FAQSection } from "@/components/content/FAQSection";
 import { Testimonials } from "@/components/engagement/Testimonials";
 import { SchemaService } from "@/components/seo/SchemaService";
 import { InternalLinks } from "@/components/content/InternalLinks";
+import { SERVICE_SLUG_ICONS } from "@/lib/icons";
 import { getAllContent, getContentBySlug } from "@/lib/content";
 import { getAllLocations } from "@/lib/locations";
 
@@ -33,6 +34,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       alternates: {
         canonical: `/services/${service}`,
       },
+      openGraph: {
+        title: svc.frontmatter.title,
+        description: svc.frontmatter.description,
+        images: [
+          {
+            url: `/api/og?title=${encodeURIComponent(svc.frontmatter.title)}&subtitle=${encodeURIComponent(svc.frontmatter.description || "")}&category=${encodeURIComponent(service)}`,
+            width: 1200,
+            height: 630,
+            alt: svc.frontmatter.title,
+          },
+        ],
+      },
     };
   } catch {
     return {};
@@ -50,6 +63,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
   }
 
   const locations = getAllLocations();
+  const Icon = SERVICE_SLUG_ICONS[service];
 
   return (
     <Container className="py-8">
@@ -62,12 +76,21 @@ export default async function ServiceCategoryPage({ params }: Props) {
       />
 
       <div className="mx-auto max-w-4xl">
-        <h1 className="text-4xl font-bold text-gray-900">
-          {svc.frontmatter.title}
-        </h1>
-        <p className="mt-3 text-lg text-gray-600">
-          {svc.frontmatter.description}
-        </p>
+        <div className="flex items-center gap-4">
+          {Icon && (
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+              <Icon className="h-7 w-7" />
+            </div>
+          )}
+          <div>
+            <h1 className="text-4xl font-bold text-gray-900">
+              {svc.frontmatter.title}
+            </h1>
+            <p className="mt-1 text-lg text-gray-600">
+              {svc.frontmatter.description}
+            </p>
+          </div>
+        </div>
 
         {svc.frontmatter.benefits && (
           <div className="mt-8">
@@ -75,7 +98,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
             <ul className="mt-4 space-y-2">
               {svc.frontmatter.benefits.map((benefit, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="mt-1 text-green-500">&#10003;</span>
+                  <span className="mt-1 text-accent-600">&#10003;</span>
                   <span className="text-gray-700">{benefit}</span>
                 </li>
               ))}
@@ -127,17 +150,20 @@ export default async function ServiceCategoryPage({ params }: Props) {
 
         <InternalLinks category={service} />
 
-        <div className="mt-12 rounded-xl bg-blue-50 p-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900">
-            Need {svc.frontmatter.title}?
-          </h2>
-          <p className="mt-2 text-gray-600">
-            Get free quotes from licensed professionals in your area.
-          </p>
-          <div className="mt-4">
-            <Button href={`/contact?service=${service}`} size="lg">
-              Get a Free Quote
-            </Button>
+        {/* CTA with gradient border */}
+        <div className="mt-12 rounded-xl bg-gradient-to-r from-blue-500 to-accent-400 p-[2px]">
+          <div className="rounded-[10px] bg-white p-8 text-center">
+            <h2 className="text-2xl font-bold text-gray-900">
+              Need {svc.frontmatter.title}?
+            </h2>
+            <p className="mt-2 text-gray-600">
+              Get free quotes from licensed professionals in your area.
+            </p>
+            <div className="mt-4">
+              <Button href={`/contact?service=${service}`} size="lg">
+                Get a Free Quote
+              </Button>
+            </div>
           </div>
         </div>
       </div>

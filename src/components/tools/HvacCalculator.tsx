@@ -75,7 +75,7 @@ export function HvacCalculator({ data }: HvacCalculatorProps) {
                 key={size}
                 type="button"
                 onClick={() => setSquareFeet(size)}
-                className={`rounded-md px-3 py-1 text-xs font-medium ${
+                className={`rounded-md px-3 py-1 text-xs font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1 ${
                   squareFeet === size
                     ? "bg-blue-600 text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"

@@ -80,16 +80,18 @@ export function ArticleLayout({
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
 
-          {/* CTA */}
-          <div className="mt-10 rounded-xl bg-blue-50 p-6 text-center">
-            <h3 className="text-lg font-bold text-gray-900">
-              Need Professional Help?
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Get free quotes from licensed professionals in your area.
-            </p>
-            <div className="mt-4">
-              <Button href="/contact">Get a Free Quote</Button>
+          {/* CTA with gradient border */}
+          <div className="mt-10 rounded-xl bg-gradient-to-r from-blue-500 to-accent-400 p-[2px]">
+            <div className="rounded-[10px] bg-white p-6 text-center">
+              <h3 className="text-lg font-bold text-gray-900">
+                Need Professional Help?
+              </h3>
+              <p className="mt-2 text-gray-600">
+                Get free quotes from licensed professionals in your area.
+              </p>
+              <div className="mt-4">
+                <Button href="/contact">Get a Free Quote</Button>
+              </div>
             </div>
           </div>
 

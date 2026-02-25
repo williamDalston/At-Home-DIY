@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllContent } from "@/lib/content";
 import { getAllLocations } from "@/lib/locations";
-import { BASE_URL } from "@/lib/constants";
+import { BASE_URL, SERVICE_CATEGORIES } from "@/lib/constants";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = [
@@ -18,6 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/tools/project-planner",
     "/privacy-policy",
     "/terms",
+    "/search",
   ];
 
   const posts = await getAllContent("blog");
@@ -53,5 +54,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
       }))
     ),
+    ...SERVICE_CATEGORIES.map((cat) => ({
+      url: `${BASE_URL}/blog/category/${cat.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    })),
   ];
 }

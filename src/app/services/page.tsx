@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { SERVICE_ICONS } from "@/lib/icons";
 import { getAllContent } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -28,28 +29,28 @@ export default async function ServicesIndexPage() {
       </p>
 
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((svc) => (
-          <Card
-            key={svc.slug}
-            href={`/services/${svc.frontmatter.serviceType || svc.slug}`}
-            className="text-center"
-          >
-            <div className="mb-4 text-4xl">
-              {svc.frontmatter.icon === "wrench" && "🔧"}
-              {svc.frontmatter.icon === "zap" && "⚡"}
-              {svc.frontmatter.icon === "home" && "🏠"}
-              {svc.frontmatter.icon === "thermometer" && "🌡️"}
-              {svc.frontmatter.icon === "paintbrush" && "🎨"}
-              {svc.frontmatter.icon === "tree" && "🌳"}
-            </div>
-            <h2 className="text-xl font-semibold text-gray-900">
-              {svc.frontmatter.title}
-            </h2>
-            <p className="mt-2 text-sm text-gray-600">
-              {svc.frontmatter.description}
-            </p>
-          </Card>
-        ))}
+        {services.map((svc) => {
+          const Icon = svc.frontmatter.icon
+            ? SERVICE_ICONS[svc.frontmatter.icon]
+            : undefined;
+          return (
+            <Card
+              key={svc.slug}
+              href={`/services/${svc.frontmatter.serviceType || svc.slug}`}
+              className="text-center"
+            >
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-100 text-blue-600 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                {Icon ? <Icon className="h-7 w-7" /> : null}
+              </div>
+              <h2 className="text-xl font-semibold text-gray-900">
+                {svc.frontmatter.title}
+              </h2>
+              <p className="mt-2 text-sm text-gray-600">
+                {svc.frontmatter.description}
+              </p>
+            </Card>
+          );
+        })}
       </div>
     </Container>
   );

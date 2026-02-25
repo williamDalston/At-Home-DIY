@@ -5,13 +5,22 @@ interface TestimonialsProps {
   limit?: number;
 }
 
+const accentColors = [
+  "border-t-blue-500",
+  "border-t-accent-400",
+  "border-t-blue-400",
+  "border-t-accent-500",
+  "border-t-blue-600",
+  "border-t-accent-600",
+];
+
 function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex gap-0.5" aria-label={`${rating} out of 5 stars`}>
       {Array.from({ length: 5 }, (_, i) => (
         <svg
           key={i}
-          className={`h-4 w-4 ${i < rating ? "text-yellow-400" : "text-gray-200"}`}
+          className={`h-5 w-5 ${i < rating ? "text-amber-400" : "text-gray-200"}`}
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -35,16 +44,29 @@ export function Testimonials({ service, limit }: TestimonialsProps) {
       {displayed.map((t, i) => (
         <div
           key={i}
-          className="rounded-xl border border-gray-200 bg-white p-6"
+          className={`relative rounded-xl border border-gray-200 border-t-2 bg-white p-6 shadow-[var(--shadow-card)] transition-shadow duration-300 hover:shadow-[var(--shadow-card-hover)] ${accentColors[i % accentColors.length]}`}
         >
+          {/* Decorative quote */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute right-4 top-3 text-5xl leading-none text-blue-100/60 select-none"
+          >
+            &ldquo;
+          </span>
+
           <StarRating rating={t.rating} />
-          <p className="mt-3 text-sm text-gray-700">&ldquo;{t.text}&rdquo;</p>
-          <div className="mt-4 flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-600">
-              {t.name.charAt(0)}
+          <p className="relative mt-3 text-sm text-gray-700">
+            &ldquo;{t.text}&rdquo;
+          </p>
+          <div className="mt-4 flex items-center gap-3">
+            {/* Gradient ring avatar */}
+            <div className="rounded-full bg-gradient-to-br from-blue-500 to-accent-400 p-0.5">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm font-bold text-blue-600">
+                {t.name.charAt(0)}
+              </div>
             </div>
             <div>
-              <p className="text-sm font-medium text-gray-900">{t.name}</p>
+              <p className="text-sm font-semibold text-gray-900">{t.name}</p>
               <p className="text-xs text-gray-500">
                 {t.city}, {t.state}
               </p>

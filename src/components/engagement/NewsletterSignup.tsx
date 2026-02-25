@@ -54,10 +54,10 @@ export function NewsletterSignup({ variant = "inline" }: NewsletterSignupProps) 
   if (variant === "footer") {
     return (
       <div>
-        <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
+        <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-200">
           Newsletter
         </h4>
-        <p className="mt-2 text-sm text-gray-600">
+        <p className="mt-2 text-sm text-gray-400">
           Get DIY tips and home improvement deals in your inbox.
         </p>
         <form onSubmit={handleSubmit} className="mt-3 flex gap-2" noValidate>
@@ -70,24 +70,24 @@ export function NewsletterSignup({ variant = "inline" }: NewsletterSignupProps) 
             placeholder="your@email.com"
             aria-invalid={hasError}
             aria-describedby={hasError ? errorId : undefined}
-            className="w-full min-w-0 rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+            className="w-full min-w-0 rounded-lg border border-gray-600 bg-gray-800 px-3 py-2 text-sm text-gray-100 placeholder:text-gray-500 focus:border-accent-400 focus:ring-1 focus:ring-accent-400"
           />
           <button
             type="submit"
             disabled={status === "loading"}
-            className="shrink-0 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700 disabled:opacity-50"
+            className="shrink-0 rounded-lg bg-accent-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-600 disabled:opacity-50"
           >
             {status === "loading" ? "..." : "Join"}
           </button>
         </form>
         {fieldError && (
-          <p id={errorId} className="mt-2 text-xs text-red-600" role="alert">{fieldError}</p>
+          <p id={errorId} className="mt-2 text-xs text-red-400" role="alert">{fieldError}</p>
         )}
         {status === "success" && (
-          <p className="mt-2 text-xs text-green-600" role="alert">{message}</p>
+          <p className="mt-2 text-xs text-green-400" role="alert">{message}</p>
         )}
         {status === "error" && (
-          <p id={errorId} className="mt-2 text-xs text-red-600" role="alert">{message}</p>
+          <p id={errorId} className="mt-2 text-xs text-red-400" role="alert">{message}</p>
         )}
       </div>
     );

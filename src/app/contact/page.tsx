@@ -9,7 +9,14 @@ export const metadata: Metadata = {
   description: `Get a free quote from trusted home service professionals. Contact ${SITE_NAME} for plumbing, electrical, roofing, and more.`,
 };
 
-export default function ContactPage() {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ service?: string }>;
+}) {
+  const params = await searchParams;
+  const defaultService = params.service || "";
+
   return (
     <Container className="py-8">
       <Breadcrumbs
@@ -28,7 +35,7 @@ export default function ContactPage() {
 
         <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-5">
           <div className="lg:col-span-3">
-            <ContactForm />
+            <ContactForm defaultService={defaultService} />
           </div>
 
           <div className="lg:col-span-2">

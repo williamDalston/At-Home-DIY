@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <!-- House roof -->
+  <path d="M32 14L12 30h6v16h28V30h6L32 14z" fill="white" opacity="0.95"/>
+  <!-- Door -->
+  <rect x="26" y="34" width="12" height="12" rx="1" fill="url(#g)" opacity="0.8"/>
+  <!-- Doorknob -->
+  <circle cx="35" cy="40" r="1.2" fill="white"/>
+</svg>

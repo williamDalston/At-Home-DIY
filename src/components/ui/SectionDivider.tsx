@@ -1,5 +1,5 @@
 interface SectionDividerProps {
-  variant?: "wave" | "angle" | "curve";
+  variant?: "wave" | "angle" | "curve" | "gradient";
   flip?: boolean;
   color?: string;
   className?: string;
@@ -11,6 +11,14 @@ export function SectionDivider({
   color = "#f9fafb",
   className = "",
 }: SectionDividerProps) {
+  if (variant === "gradient") {
+    return (
+      <div className={`w-full px-8 py-2 ${className}`}>
+        <div className="mx-auto h-px max-w-4xl bg-gradient-to-r from-transparent via-blue-400/40 to-transparent" />
+      </div>
+    );
+  }
+
   const transform = flip ? "scale(1, -1)" : undefined;
 
   const paths: Record<string, string> = {

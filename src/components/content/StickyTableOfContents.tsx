@@ -47,7 +47,7 @@ export function StickyTableOfContents({ headings }: StickyTableOfContentsProps) 
           <li key={heading.id} className={heading.level === 3 ? "ml-2" : ""}>
             <a
               href={`#${heading.id}`}
-              className={`block border-l-2 -ml-[2px] py-1 pl-3 text-sm transition-colors ${
+              className={`block border-l-2 -ml-[2px] py-1 pl-3 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-r-sm ${
                 activeId === heading.id
                   ? "border-blue-600 text-blue-600 font-medium"
                   : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-300"

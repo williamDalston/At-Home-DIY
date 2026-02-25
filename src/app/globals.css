@@ -11,6 +11,65 @@
   --color-brand-500: #3b82f6;
   --color-brand-600: #2563eb;
   --color-brand-700: #1d4ed8;
+  --color-accent-400: #2dd4bf;
+  --color-accent-500: #14b8a6;
+  --color-accent-600: #0d9488;
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 20px 40px -12px rgba(0, 0, 0, 0.12);
+
+  --animate-fade-in-up: fade-in-up 0.5s ease-out both;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(59, 130, 246, 0.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-float,
+  .animate-shimmer,
+  .animate-pulse-glow {
+    animation: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,4 +81,64 @@
 body {
   background: var(--color-background);
   color: var(--color-foreground);
+}
+
+/* Print styles for articles */
+@media print {
+  header,
+  footer,
+  nav,
+  .back-to-top,
+  .cookie-consent,
+  .newsletter-signup,
+  .share-buttons,
+  .ask-expert,
+  button,
+  [aria-label="Back to top"],
+  [aria-label="Breadcrumb"] {
+    display: none !important;
+  }
+
+  main {
+    min-height: auto !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.6;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  /* Show URLs for external links */
+  .prose a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+    word-break: break-all;
+  }
+
+  .prose {
+    max-width: 100% !important;
+  }
+
+  /* Avoid page breaks inside elements */
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  img, pre, blockquote, table {
+    page-break-inside: avoid;
+  }
+
+  /* Remove shadows and decorative elements */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 }

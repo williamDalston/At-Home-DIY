@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BackToTopButton } from "@/components/engagement/BackToTopButton";
 import { CookieConsent } from "@/components/engagement/CookieConsent";
+import { SearchKeyboardShortcut } from "@/components/search/SearchKeyboardShortcut";
 import { SITE_NAME, SITE_DESCRIPTION, BASE_URL } from "@/lib/constants";
 import "./globals.css";
 
@@ -25,6 +26,14 @@ export const metadata: Metadata = {
     default: `${SITE_NAME} - Home Services & DIY Guides`,
   },
   description: SITE_DESCRIPTION,
+  icons: {
+    icon: "/favicon.svg",
+  },
+  alternates: {
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
@@ -61,6 +70,7 @@ export default function RootLayout({
         <Footer />
         <BackToTopButton />
         <CookieConsent />
+        <SearchKeyboardShortcut />
 
         {gaId && (
           <>

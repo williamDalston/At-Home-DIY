@@ -22,17 +22,21 @@ export function FAQSection({ faqs }: FAQSectionProps) {
         {faqs.map((faq, i) => (
           <div
             key={i}
-            className="rounded-lg border border-gray-200 bg-white overflow-hidden"
+            className={`rounded-lg border border-gray-200 bg-white overflow-hidden transition-all duration-200 border-l-4 ${
+              openIndex === i
+                ? "border-l-blue-500 shadow-[var(--shadow-card)]"
+                : "border-l-transparent"
+            }`}
           >
             <button
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
               aria-expanded={openIndex === i}
-              className="flex w-full items-center justify-between px-6 py-4 text-left text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors"
+              className="flex w-full items-center justify-between px-6 py-4 text-left text-lg font-medium text-gray-900 transition-colors hover:bg-gray-50 hover:text-blue-600"
             >
               <span>{faq.question}</span>
               <span
                 className={`ml-4 shrink-0 text-gray-400 transition-transform duration-200 motion-safe:transition-transform ${
-                  openIndex === i ? "rotate-180" : ""
+                  openIndex === i ? "rotate-180 text-blue-500" : ""
                 }`}
               >
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

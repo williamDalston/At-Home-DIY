@@ -34,7 +34,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: post.frontmatter.description,
         type: "article",
         publishedTime: post.frontmatter.date,
-        images: post.frontmatter.image ? [post.frontmatter.image] : undefined,
+        images: [
+          post.frontmatter.image || {
+            url: `/api/og?title=${encodeURIComponent(post.frontmatter.title)}&subtitle=${encodeURIComponent(post.frontmatter.description || "")}&category=${encodeURIComponent(post.frontmatter.category || "")}`,
+            width: 1200,
+            height: 630,
+            alt: post.frontmatter.title,
+          },
+        ],
       },
     };
   } catch {

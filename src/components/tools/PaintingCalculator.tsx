@@ -76,7 +76,7 @@ export function PaintingCalculator({ data }: PaintingCalculatorProps) {
                 key={size}
                 type="button"
                 onClick={() => setWallArea(size)}
-                className={`rounded-md px-3 py-1 text-xs font-medium ${
+                className={`rounded-md px-3 py-1 text-xs font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1 ${
                   wallArea === size
                     ? "bg-blue-600 text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -186,6 +186,12 @@ export function PaintingCalculator({ data }: PaintingCalculatorProps) {
           <div className="mt-6">
             <h4 className="text-sm font-semibold text-gray-700">Breakdown</h4>
             <table className="mt-2 w-full text-sm">
+              <thead className="sr-only">
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Cost</th>
+                </tr>
+              </thead>
               <tbody>
                 <tr className="border-b border-gray-100">
                   <td className="py-2 text-gray-600">Paint ({result.gallonsNeeded} gal)</td>

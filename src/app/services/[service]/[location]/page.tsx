@@ -106,25 +106,25 @@ export default async function CityLandingPage({ params }: Props) {
               </h2>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 text-green-500">&#10003;</span>
+                  <span className="mt-1 text-accent-600">&#10003;</span>
                   <span className="text-gray-700">
                     Licensed and insured professionals familiar with {loc.city} building codes
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 text-green-500">&#10003;</span>
+                  <span className="mt-1 text-accent-600">&#10003;</span>
                   <span className="text-gray-700">
                     Fast response times from contractors near you
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 text-green-500">&#10003;</span>
+                  <span className="mt-1 text-accent-600">&#10003;</span>
                   <span className="text-gray-700">
                     Free estimates with no obligation
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 text-green-500">&#10003;</span>
+                  <span className="mt-1 text-accent-600">&#10003;</span>
                   <span className="text-gray-700">
                     Verified reviews from {loc.city} homeowners
                   </span>
