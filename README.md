@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FixIt Finder
+
+Expert DIY guides and local home service professionals. Find trusted contractors, get free quotes, and learn to tackle home projects yourself.
+
+## Features
+
+- **Service Directory** - Find professionals for plumbing, electrical, roofing, HVAC, painting, and landscaping across 10 major US cities
+- **DIY Blog** - Step-by-step guides for common home improvement projects
+- **Interactive Tools** - Cost calculators for HVAC, painting, and general home projects
+- **SEO Optimized** - Dynamic sitemap, OG images, JSON-LD schemas, and RSS feed
+- **Contact Forms** - Validated forms with rate limiting and email notifications
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS
+- **Email**: Resend
+- **Rate Limiting**: Upstash Redis (optional)
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/williamDalston/At-Home-DIY.git
+cd At-Home-DIY
+
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp .env.example .env.local
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+See `.env.example` for all available configuration options:
 
-## Learn More
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `SITE_URL` | Production URL | Yes |
+| `CONTACT_EMAIL` | Contact form recipient | Yes |
+| `CONTACT_PHONE` | Display phone number | Yes |
+| `GA_MEASUREMENT_ID` | Google Analytics ID | No |
+| `RESEND_API_KEY` | Resend API key for emails | No |
+| `UPSTASH_REDIS_REST_URL` | Redis URL for rate limiting | No |
+| `UPSTASH_REDIS_REST_TOKEN` | Redis token | No |
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+├── content/
+│   ├── blog/           # Markdown blog posts
+│   ├── data/           # JSON data files for tools
+│   └── services/       # Service page content
+├── public/
+│   ├── images/         # Blog and service images
+│   └── icons/          # Service category icons
+├── src/
+│   ├── app/            # Next.js App Router pages
+│   ├── components/     # React components
+│   └── lib/            # Utilities and constants
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+Deploy to Vercel with one click:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/williamDalston/At-Home-DIY)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Or deploy manually:
+
+```bash
+npm run build
+npm start
+```
+
+## License
+
+MIT

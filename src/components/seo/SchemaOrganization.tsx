@@ -9,7 +9,7 @@ export function SchemaOrganization() {
         "@type": "Organization",
         name: SITE_NAME,
         url: BASE_URL,
-        logo: `${BASE_URL}/images/logo.png`,
+        logo: `${BASE_URL}/logo.png`,
         contactPoint: {
           "@type": "ContactPoint",
           telephone: CONTACT_PHONE,

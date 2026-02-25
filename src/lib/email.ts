@@ -4,8 +4,8 @@ const resend = process.env.RESEND_API_KEY
   ? new Resend(process.env.RESEND_API_KEY)
   : null;
 
-const FROM_ADDRESS = process.env.RESEND_FROM_EMAIL || "noreply@fixitfinder.com";
-const ADMIN_EMAIL = process.env.CONTACT_EMAIL || "leads@fixitfinder.com";
+const FROM_ADDRESS = process.env.RESEND_FROM_EMAIL || "info@alstonanalytics.com";
+const ADMIN_EMAIL = process.env.CONTACT_EMAIL || "info@alstonanalytics.com";
 const SITE_URL = process.env.SITE_URL || "https://www.fixitfinder.com";
 
 interface SendEmailOptions {

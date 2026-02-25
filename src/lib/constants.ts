@@ -3,8 +3,8 @@ export const SITE_DESCRIPTION =
   "Expert DIY guides and local home service professionals. Find trusted contractors, get free quotes, and learn to tackle home projects yourself.";
 export const BASE_URL = process.env.SITE_URL || "https://www.fixitfinder.com";
 export const CONTACT_EMAIL =
-  process.env.CONTACT_EMAIL || "leads@fixitfinder.com";
-export const CONTACT_PHONE = process.env.CONTACT_PHONE || "+1-800-123-4567";
+  process.env.CONTACT_EMAIL || "info@alstonanalytics.com";
+export const CONTACT_PHONE = process.env.CONTACT_PHONE || "+1-555-349-4663";
 
 export const SERVICE_CATEGORIES = [
   { slug: "plumbing", label: "Plumbing", icon: "wrench" },
