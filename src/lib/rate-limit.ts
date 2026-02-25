@@ -1,58 +1,91 @@
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
+
 /**
- * Simple in-memory rate limiter for API routes.
- * In production with multiple serverless instances, replace with
- * a distributed store (e.g. @upstash/ratelimit + Vercel KV).
+ * Rate limiter with automatic backend selection:
+ * - If UPSTASH_REDIS_REST_URL is set → uses Upstash Redis (distributed, production-ready)
+ * - Otherwise → uses in-memory Map (fine for single instance / dev)
  */
+
+// --- In-memory fallback ---
 
 interface RateLimitEntry {
   count: number;
   resetTime: number;
 }
 
-const store = new Map<string, RateLimitEntry>();
+const memoryStore = new Map<string, RateLimitEntry>();
 
-// Clean up expired entries every 5 minutes
-setInterval(() => {
-  const now = Date.now();
-  for (const [key, entry] of store) {
-    if (now > entry.resetTime) {
-      store.delete(key);
+// Clean up expired entries periodically
+if (typeof setInterval !== "undefined") {
+  setInterval(() => {
+    const now = Date.now();
+    for (const [key, entry] of memoryStore) {
+      if (now > entry.resetTime) {
+        memoryStore.delete(key);
+      }
     }
-  }
-}, 5 * 60 * 1000);
-
-interface RateLimitOptions {
-  /** Maximum requests allowed within the window */
-  limit: number;
-  /** Time window in seconds */
-  windowSeconds: number;
+  }, 5 * 60 * 1000);
 }
 
-interface RateLimitResult {
-  success: boolean;
-  remaining: number;
-  resetTime: number;
-}
-
-export function rateLimit(
+function memoryRateLimit(
   identifier: string,
-  options: RateLimitOptions
-): RateLimitResult {
+  limit: number,
+  windowSeconds: number
+): { success: boolean } {
   const now = Date.now();
-  const windowMs = options.windowSeconds * 1000;
-  const entry = store.get(identifier);
+  const windowMs = windowSeconds * 1000;
+  const entry = memoryStore.get(identifier);
 
   if (!entry || now > entry.resetTime) {
-    store.set(identifier, { count: 1, resetTime: now + windowMs });
-    return { success: true, remaining: options.limit - 1, resetTime: now + windowMs };
+    memoryStore.set(identifier, { count: 1, resetTime: now + windowMs });
+    return { success: true };
   }
 
-  if (entry.count >= options.limit) {
-    return { success: false, remaining: 0, resetTime: entry.resetTime };
+  if (entry.count >= limit) {
+    return { success: false };
   }
 
   entry.count++;
-  return { success: true, remaining: options.limit - entry.count, resetTime: entry.resetTime };
+  return { success: true };
+}
+
+// --- Upstash Redis backend ---
+
+const upstashLimiters = new Map<string, Ratelimit>();
+
+function getUpstashLimiter(limit: number, windowSeconds: number): Ratelimit {
+  const key = `${limit}:${windowSeconds}`;
+  let limiter = upstashLimiters.get(key);
+  if (!limiter) {
+    limiter = new Ratelimit({
+      redis: Redis.fromEnv(),
+      limiter: Ratelimit.slidingWindow(limit, `${windowSeconds} s`),
+      analytics: true,
+    });
+    upstashLimiters.set(key, limiter);
+  }
+  return limiter;
+}
+
+// --- Public API ---
+
+interface RateLimitOptions {
+  limit: number;
+  windowSeconds: number;
+}
+
+export async function rateLimit(
+  identifier: string,
+  options: RateLimitOptions
+): Promise<{ success: boolean }> {
+  if (process.env.UPSTASH_REDIS_REST_URL) {
+    const limiter = getUpstashLimiter(options.limit, options.windowSeconds);
+    const { success } = await limiter.limit(identifier);
+    return { success };
+  }
+
+  return memoryRateLimit(identifier, options.limit, options.windowSeconds);
 }
 
 /** Extract a client identifier from a request (IP or fallback) */

@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import { askExpertSchema } from "@/lib/validators";
 import { rateLimit, getClientId } from "@/lib/rate-limit";
+import { sendEmail, formatExpertQuestionEmail } from "@/lib/email";
 
 export async function POST(request: Request) {
   try {
     const clientId = getClientId(request);
-    const rl = rateLimit(`ask-expert:${clientId}`, { limit: 5, windowSeconds: 600 });
+    const rl = await rateLimit(`ask-expert:${clientId}`, { limit: 5, windowSeconds: 600 });
     if (!rl.success) {
       return NextResponse.json(
         { error: "Too many requests. Please try again later." },
@@ -23,9 +24,13 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Replace with email forwarding or helpdesk integration.
-    console.log("[Ask Expert] New question from:", result.data.name, result.data.email);
-    console.log("[Ask Expert] Question:", result.data.question);
+    const sent = await sendEmail(formatExpertQuestionEmail(result.data));
+    if (!sent) {
+      return NextResponse.json(
+        { error: "Failed to send question. Please try again." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch {

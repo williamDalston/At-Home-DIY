@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#F5F5F5"/>
+  <!-- Toolbox -->
+  <rect x="280" y="150" width="240" height="140" rx="8" fill="#F44336"/>
+  <rect x="280" y="150" width="240" height="30" rx="8" fill="#D32F2F"/>
+  <rect x="370" y="138" width="60" height="25" rx="6" fill="#E57373" stroke="#D32F2F" stroke-width="2"/>
+  <!-- Tools sticking out -->
+  <rect x="320" y="100" width="8" height="80" rx="2" fill="#FFC107" transform="rotate(-15, 324, 140)"/>
+  <rect x="460" y="105" width="8" height="75" rx="2" fill="#2196F3" transform="rotate(10, 464, 140)"/>
+  <circle cx="464" cy="105" r="12" fill="none" stroke="#2196F3" stroke-width="3"/>
+  <!-- Text -->
+  <text x="400" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#424242">DIY Guide</text>
+  <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#757575">Step-by-step instructions</text>
+</svg>

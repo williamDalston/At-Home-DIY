@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#EFEBE9"/>
+  <!-- House with prominent roof -->
+  <rect x="150" y="220" width="300" height="150" fill="#FFF8E1" stroke="#795548" stroke-width="2"/>
+  <!-- Large roof -->
+  <polygon points="120,220 300,80 480,220" fill="#D32F2F" stroke="#B71C1C" stroke-width="3"/>
+  <!-- Shingles pattern -->
+  <line x1="180" y1="170" x2="420" y2="170" stroke="#C62828" stroke-width="1" opacity="0.5"/>
+  <line x1="200" y1="195" x2="400" y2="195" stroke="#C62828" stroke-width="1" opacity="0.5"/>
+  <!-- Door -->
+  <rect x="270" y="300" width="60" height="70" fill="#795548"/>
+  <!-- Windows -->
+  <rect x="180" y="260" width="50" height="40" fill="#81D4FA" stroke="#795548" stroke-width="2"/>
+  <rect x="370" y="260" width="50" height="40" fill="#81D4FA" stroke="#795548" stroke-width="2"/>
+  <text x="300" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#4E342E">Roofing Services</text>
+</svg>

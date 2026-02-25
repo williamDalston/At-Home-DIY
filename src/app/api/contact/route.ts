@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/validators";
 import { rateLimit, getClientId } from "@/lib/rate-limit";
+import { sendEmail, formatContactEmail } from "@/lib/email";
 
 export async function POST(request: Request) {
   try {
     const clientId = getClientId(request);
-    const rl = rateLimit(`contact:${clientId}`, { limit: 5, windowSeconds: 600 });
+    const rl = await rateLimit(`contact:${clientId}`, { limit: 5, windowSeconds: 600 });
     if (!rl.success) {
       return NextResponse.json(
         { error: "Too many requests. Please try again later." },
@@ -23,8 +24,13 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Replace with email service (Resend, SendGrid) or database in production.
-    console.log("Lead received:", result.data);
+    const sent = await sendEmail(formatContactEmail(result.data));
+    if (!sent) {
+      return NextResponse.json(
+        { error: "Failed to send message. Please try again." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({
       success: true,
