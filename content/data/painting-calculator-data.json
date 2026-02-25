@@ -1,0 +1,16 @@
+{
+  "paintTypes": {
+    "flat": { "label": "Flat / Matte", "costPerGallon": 30, "coverageSqFt": 400 },
+    "eggshell": { "label": "Eggshell", "costPerGallon": 35, "coverageSqFt": 375 },
+    "semigloss": { "label": "Semi-Gloss", "costPerGallon": 40, "coverageSqFt": 350 },
+    "gloss": { "label": "High-Gloss", "costPerGallon": 45, "coverageSqFt": 325 }
+  },
+  "surfaceConditions": {
+    "good": { "label": "Good (minimal prep)", "prepCostPerSqFt": 0.25 },
+    "fair": { "label": "Fair (some patching)", "prepCostPerSqFt": 0.50 },
+    "poor": { "label": "Poor (major repair)", "prepCostPerSqFt": 1.00 }
+  },
+  "laborRatePerSqFt": 1.50,
+  "primerCostPerSqFt": 0.30,
+  "coatsDefault": 2
+}

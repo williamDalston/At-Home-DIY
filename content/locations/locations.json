@@ -1,0 +1,12 @@
+[
+  { "city": "New York", "state": "NY", "slug": "new-york-ny", "population": 8258035 },
+  { "city": "Los Angeles", "state": "CA", "slug": "los-angeles-ca", "population": 3898747 },
+  { "city": "Chicago", "state": "IL", "slug": "chicago-il", "population": 2664452 },
+  { "city": "Houston", "state": "TX", "slug": "houston-tx", "population": 2304580 },
+  { "city": "Phoenix", "state": "AZ", "slug": "phoenix-az", "population": 1608139 },
+  { "city": "Philadelphia", "state": "PA", "slug": "philadelphia-pa", "population": 1603797 },
+  { "city": "San Antonio", "state": "TX", "slug": "san-antonio-tx", "population": 1547253 },
+  { "city": "San Diego", "state": "CA", "slug": "san-diego-ca", "population": 1423851 },
+  { "city": "Dallas", "state": "TX", "slug": "dallas-tx", "population": 1304379 },
+  { "city": "Jacksonville", "state": "FL", "slug": "jacksonville-fl", "population": 949611 }
+]

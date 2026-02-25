@@ -1,0 +1,20 @@
+{
+  "climateZones": {
+    "hot-humid": { "label": "Hot & Humid (FL, TX Gulf)", "btuPerSqFt": 30 },
+    "hot-dry": { "label": "Hot & Dry (AZ, NV)", "btuPerSqFt": 28 },
+    "mixed": { "label": "Mixed / Moderate (Mid-Atlantic)", "btuPerSqFt": 25 },
+    "cold": { "label": "Cold (Midwest, Northeast)", "btuPerSqFt": 35 },
+    "very-cold": { "label": "Very Cold (MN, WI, ME)", "btuPerSqFt": 40 }
+  },
+  "insulationLevels": {
+    "poor": { "label": "Poor (old home, no upgrades)", "multiplier": 1.3 },
+    "average": { "label": "Average", "multiplier": 1.0 },
+    "good": { "label": "Good (well-insulated)", "multiplier": 0.85 }
+  },
+  "systemTypes": {
+    "central-ac": { "label": "Central AC + Furnace", "costPerTon": 3500 },
+    "heat-pump": { "label": "Heat Pump (all-in-one)", "costPerTon": 4500 },
+    "mini-split": { "label": "Ductless Mini-Split", "costPerTon": 5000 }
+  },
+  "btuPerTon": 12000
+}

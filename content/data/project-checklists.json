@@ -1,0 +1,125 @@
+{
+  "checklists": [
+    {
+      "id": "kitchen-remodel",
+      "title": "Kitchen Remodel",
+      "items": [
+        "Set budget and priorities",
+        "Research and select contractor",
+        "Choose cabinet style and material",
+        "Select countertop material",
+        "Pick backsplash tile",
+        "Choose appliances",
+        "Select sink and faucet",
+        "Plan lighting layout",
+        "Select flooring",
+        "Choose paint colors",
+        "Obtain necessary permits",
+        "Set up temporary kitchen",
+        "Demolition of existing kitchen",
+        "Rough plumbing and electrical",
+        "Install cabinets",
+        "Install countertops",
+        "Install backsplash",
+        "Install appliances",
+        "Install lighting fixtures",
+        "Paint walls and trim",
+        "Install flooring",
+        "Final inspection",
+        "Final walkthrough with contractor"
+      ]
+    },
+    {
+      "id": "bathroom-remodel",
+      "title": "Bathroom Remodel",
+      "items": [
+        "Set budget and design plan",
+        "Hire contractor",
+        "Select fixtures (toilet, vanity, tub/shower)",
+        "Choose tile for floors and walls",
+        "Select faucets and hardware",
+        "Choose lighting fixtures",
+        "Pick paint colors",
+        "Obtain permits",
+        "Demolition",
+        "Rough plumbing",
+        "Rough electrical",
+        "Install cement board and waterproofing",
+        "Tile installation",
+        "Install vanity and toilet",
+        "Install shower/tub",
+        "Install lighting and exhaust fan",
+        "Paint",
+        "Install mirrors and accessories",
+        "Final inspection"
+      ]
+    },
+    {
+      "id": "roof-replacement",
+      "title": "Roof Replacement",
+      "items": [
+        "Get multiple contractor estimates",
+        "Check contractor licensing and insurance",
+        "Choose roofing material",
+        "Review and sign contract",
+        "Obtain building permit",
+        "Protect landscaping and outdoor items",
+        "Tear-off existing roof",
+        "Inspect and repair decking",
+        "Install underlayment",
+        "Install drip edge and flashing",
+        "Install roofing material",
+        "Install ridge vents",
+        "Clean up debris",
+        "Final inspection",
+        "Verify warranty documentation"
+      ]
+    },
+    {
+      "id": "interior-painting",
+      "title": "Interior Painting Project",
+      "items": [
+        "Choose colors and buy samples",
+        "Test samples on walls",
+        "Calculate paint quantities",
+        "Buy paint, primer, and supplies",
+        "Remove or cover furniture",
+        "Lay drop cloths",
+        "Remove outlet covers and switch plates",
+        "Apply painter's tape",
+        "Fill holes and sand smooth",
+        "Apply primer where needed",
+        "Cut in edges and corners",
+        "Roll walls (first coat)",
+        "Apply second coat",
+        "Paint trim and doors",
+        "Remove tape while paint is slightly tacky",
+        "Touch up any missed spots",
+        "Replace outlet covers",
+        "Clean up and dispose of materials"
+      ]
+    },
+    {
+      "id": "deck-build",
+      "title": "Deck Building",
+      "items": [
+        "Check local building codes and setbacks",
+        "Design deck layout and dimensions",
+        "Choose decking material (wood, composite)",
+        "Calculate materials list",
+        "Obtain building permit",
+        "Call 811 to mark underground utilities",
+        "Lay out and dig post holes",
+        "Set posts in concrete",
+        "Install beams",
+        "Install joists and joist hangers",
+        "Install decking boards",
+        "Install railing posts",
+        "Install railing and balusters",
+        "Build stairs if needed",
+        "Apply stain or sealant (if wood)",
+        "Schedule final inspection"
+      ]
+    }
+  ]
+}

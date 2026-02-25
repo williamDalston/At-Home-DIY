@@ -1,0 +1,41 @@
+{
+  "materials": {
+    "asphalt": {
+      "label": "Asphalt Shingles",
+      "baseCostPerSqFt": 5.25,
+      "description": "Most popular and affordable option. 20-30 year lifespan."
+    },
+    "metal": {
+      "label": "Standing Seam Metal",
+      "baseCostPerSqFt": 11.00,
+      "description": "Durable and energy efficient. 40-70 year lifespan."
+    },
+    "tile": {
+      "label": "Clay/Concrete Tile",
+      "baseCostPerSqFt": 15.00,
+      "description": "Premium material with classic look. 50-100 year lifespan."
+    },
+    "flat": {
+      "label": "Flat Roof (TPO/EPDM)",
+      "baseCostPerSqFt": 6.00,
+      "description": "For low-slope and flat roofs. 20-30 year lifespan."
+    }
+  },
+  "pitchMultipliers": {
+    "low": { "label": "Low (2:12 - 4:12)", "multiplier": 1.0 },
+    "medium": { "label": "Medium (5:12 - 8:12)", "multiplier": 1.1 },
+    "high": { "label": "High/Steep (9:12+)", "multiplier": 1.25 }
+  },
+  "storyMultipliers": {
+    "1": { "label": "1 Story", "multiplier": 1.0 },
+    "2": { "label": "2 Stories", "multiplier": 1.15 },
+    "3": { "label": "3+ Stories", "multiplier": 1.35 }
+  },
+  "regionalAdjustments": {
+    "low": { "label": "Low Cost Area (Rural/South)", "multiplier": 0.85 },
+    "average": { "label": "Average Cost Area", "multiplier": 1.0 },
+    "high": { "label": "High Cost Area (Urban/Northeast)", "multiplier": 1.25 },
+    "very-high": { "label": "Very High Cost Area (NYC/SF/LA)", "multiplier": 1.45 }
+  },
+  "removalCostPerSqFt": 1.50
+}

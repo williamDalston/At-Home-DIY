@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Sarah M.",
+    "city": "New York",
+    "state": "NY",
+    "service": "plumbing",
+    "rating": 5,
+    "text": "Found an amazing plumber through FixIt Finder within hours. Fixed our leaky pipe the same day. The cost calculator helped us know what to expect.",
+    "date": "2026-01-15"
+  },
+  {
+    "name": "James K.",
+    "city": "Chicago",
+    "state": "IL",
+    "service": "roofing",
+    "rating": 5,
+    "text": "After storm damage, we needed a roof repair fast. Got three quotes through the site and had the work done within a week. Excellent experience.",
+    "date": "2026-01-20"
+  },
+  {
+    "name": "Maria L.",
+    "city": "Los Angeles",
+    "state": "CA",
+    "service": "electrical",
+    "rating": 5,
+    "text": "The DIY guides helped me fix a simple outlet issue myself. When I needed a panel upgrade, I used FixIt Finder to find a licensed electrician. Great resource!",
+    "date": "2026-02-01"
+  },
+  {
+    "name": "Robert P.",
+    "city": "Houston",
+    "state": "TX",
+    "service": "hvac",
+    "rating": 5,
+    "text": "Used the HVAC sizing calculator before getting quotes. It helped me understand exactly what I needed. The contractor confirmed the calculator was spot-on.",
+    "date": "2026-02-05"
+  },
+  {
+    "name": "Jennifer W.",
+    "city": "Phoenix",
+    "state": "AZ",
+    "service": "painting",
+    "rating": 4,
+    "text": "Needed our exterior repainted and used FixIt Finder to compare estimates. The painting cost calculator was really helpful for budgeting.",
+    "date": "2026-02-08"
+  },
+  {
+    "name": "David H.",
+    "city": "Philadelphia",
+    "state": "PA",
+    "service": "plumbing",
+    "rating": 5,
+    "text": "The step-by-step drain cleaning guide saved me a service call. Clear instructions and helpful tips. Bookmarked the site for future reference.",
+    "date": "2026-02-10"
+  },
+  {
+    "name": "Lisa T.",
+    "city": "San Diego",
+    "state": "CA",
+    "service": "landscaping",
+    "rating": 5,
+    "text": "Found a fantastic landscaper for our backyard redesign. The project planner checklist kept us organized throughout the entire process.",
+    "date": "2026-02-12"
+  },
+  {
+    "name": "Michael C.",
+    "city": "Dallas",
+    "state": "TX",
+    "service": "roofing",
+    "rating": 5,
+    "text": "The roofing cost estimator was incredibly accurate. Got our roof replaced and the final cost was within 5% of the estimate. Highly recommend.",
+    "date": "2026-02-14"
+  }
+]

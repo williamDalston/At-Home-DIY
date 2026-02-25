@@ -1,0 +1,107 @@
+{
+  "questions": [
+    {
+      "id": "home-age",
+      "question": "How old is your home?",
+      "options": [
+        { "label": "Less than 10 years", "score": 1 },
+        { "label": "10-30 years", "score": 2 },
+        { "label": "30-50 years", "score": 3 },
+        { "label": "Over 50 years", "score": 4 }
+      ]
+    },
+    {
+      "id": "insulation",
+      "question": "How well-insulated is your home?",
+      "options": [
+        { "label": "Very well insulated", "score": 1 },
+        { "label": "Adequately insulated", "score": 2 },
+        { "label": "Poorly insulated", "score": 3 },
+        { "label": "Not sure", "score": 3 }
+      ]
+    },
+    {
+      "id": "windows",
+      "question": "What type of windows do you have?",
+      "options": [
+        { "label": "Triple-pane / Energy Star", "score": 1 },
+        { "label": "Double-pane", "score": 2 },
+        { "label": "Single-pane", "score": 4 },
+        { "label": "Mixed / Not sure", "score": 3 }
+      ]
+    },
+    {
+      "id": "hvac-age",
+      "question": "How old is your HVAC system?",
+      "options": [
+        { "label": "Less than 5 years", "score": 1 },
+        { "label": "5-10 years", "score": 2 },
+        { "label": "10-15 years", "score": 3 },
+        { "label": "Over 15 years", "score": 4 }
+      ]
+    },
+    {
+      "id": "thermostat",
+      "question": "What thermostat do you use?",
+      "options": [
+        { "label": "Smart thermostat (Nest, Ecobee)", "score": 1 },
+        { "label": "Programmable thermostat", "score": 2 },
+        { "label": "Basic manual thermostat", "score": 3 }
+      ]
+    },
+    {
+      "id": "lighting",
+      "question": "What lighting does your home primarily use?",
+      "options": [
+        { "label": "Mostly LED", "score": 1 },
+        { "label": "Mix of LED and CFL", "score": 2 },
+        { "label": "Mostly incandescent", "score": 4 }
+      ]
+    },
+    {
+      "id": "water-heater",
+      "question": "What type of water heater do you have?",
+      "options": [
+        { "label": "Tankless / Heat pump", "score": 1 },
+        { "label": "Standard tank (less than 10 years)", "score": 2 },
+        { "label": "Standard tank (over 10 years)", "score": 3 }
+      ]
+    }
+  ],
+  "recommendations": {
+    "low": {
+      "range": [7, 12],
+      "title": "Great Job! Your Home is Energy Efficient",
+      "tips": [
+        "Consider solar panels to further reduce energy costs",
+        "Look into utility rebate programs for additional savings",
+        "Schedule annual HVAC maintenance to keep efficiency high"
+      ],
+      "estimatedAnnualSavings": 200
+    },
+    "medium": {
+      "range": [13, 19],
+      "title": "Good Start — Room for Improvement",
+      "tips": [
+        "Upgrade to a smart thermostat to save 10-15% on heating/cooling",
+        "Add insulation to your attic — it pays for itself in 2-3 years",
+        "Replace incandescent bulbs with LEDs to cut lighting costs by 75%",
+        "Seal air leaks around windows and doors with weatherstripping"
+      ],
+      "estimatedAnnualSavings": 600
+    },
+    "high": {
+      "range": [20, 28],
+      "title": "Significant Savings Opportunity",
+      "tips": [
+        "Upgrade your HVAC system to a high-efficiency model for 20-40% savings",
+        "Replace single-pane windows with double-pane Energy Star windows",
+        "Add insulation throughout — walls, attic, and crawl spaces",
+        "Install a smart thermostat and program temperature setbacks",
+        "Switch all lighting to LED bulbs",
+        "Consider a tankless or heat pump water heater"
+      ],
+      "estimatedAnnualSavings": 1200
+    }
+  }
+}
