@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import Link from "next/link";
 import { Search, BookOpen, Wrench } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
@@ -24,8 +24,22 @@ const categoryBadge: Record<string, "blue" | "green" | "yellow" | "orange" | "de
 
 export function SearchClient() {
   const [query, setQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
   const [items, setItems] = useState<SearchItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleQueryChange = useCallback((value: string) => {
+    setQuery(value);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => setDebouncedQuery(value), 200);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     fetch("/api/search")
@@ -38,23 +52,23 @@ export function SearchClient() {
   }, []);
 
   const results = useMemo(() => {
-    if (!query.trim()) return [];
-    const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    if (!debouncedQuery.trim()) return [];
+    const terms = debouncedQuery.toLowerCase().split(/\s+/).filter(Boolean);
     return items.filter((item) => {
       const text = `${item.title} ${item.description} ${item.category || ""}`.toLowerCase();
       return terms.every((term) => text.includes(term));
     });
-  }, [query, items]);
+  }, [debouncedQuery, items]);
 
   return (
     <div>
       <div className="relative">
-        <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
+        <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-500" aria-hidden="true" />
         <input
           type="search"
           placeholder="Search guides, services, tips..."
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => handleQueryChange(e.target.value)}
           autoFocus
           className="w-full rounded-xl border border-gray-300 bg-white py-3.5 pl-12 pr-4 text-lg text-gray-900 shadow-sm transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
           aria-label="Search"
@@ -62,7 +76,7 @@ export function SearchClient() {
       </div>
 
       {loading && (
-        <p className="mt-6 text-center text-gray-400">Loading search index...</p>
+        <p className="mt-6 text-center text-gray-500">Loading search index...</p>
       )}
 
       {!loading && query.trim() && (
@@ -72,7 +86,7 @@ export function SearchClient() {
               <p className="text-gray-500">
                 No results found for &ldquo;{query}&rdquo;
               </p>
-              <p className="mt-1 text-sm text-gray-400">
+              <p className="mt-1 text-sm text-gray-500">
                 Try different keywords or browse our{" "}
                 <Link href="/blog" className="text-blue-600 hover:underline">
                   blog
@@ -86,7 +100,7 @@ export function SearchClient() {
             </div>
           ) : (
             <>
-              <p className="mb-4 text-sm text-gray-400">
+              <p className="mb-4 text-sm text-gray-500">
                 {results.length} result{results.length !== 1 ? "s" : ""} found
               </p>
               <ul className="space-y-3">
@@ -132,8 +146,8 @@ export function SearchClient() {
       )}
 
       {!loading && !query.trim() && (
-        <div className="mt-8 text-center text-gray-400">
-          <Search className="mx-auto mb-3 h-10 w-10 text-gray-300" />
+        <div className="mt-8 text-center text-gray-500">
+          <Search className="mx-auto mb-3 h-10 w-10 text-gray-500" aria-hidden="true" />
           <p>Start typing to search across all guides and services.</p>
         </div>
       )}

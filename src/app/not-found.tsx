@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { SITE_NAME, SERVICE_CATEGORIES } from "@/lib/constants";
+import { SERVICE_CATEGORIES } from "@/lib/constants";
 import { Search, Home, BookOpen, Wrench } from "lucide-react";
 
 export default function NotFound() {
@@ -47,7 +47,7 @@ export default function NotFound() {
 
       {/* Quick service links */}
       <div className="mx-auto mt-14 max-w-2xl">
-        <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+        <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
           Popular Services
         </h2>
         <div className="mt-4 flex flex-wrap justify-center gap-3">

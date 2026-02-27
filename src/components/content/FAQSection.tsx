@@ -31,20 +31,25 @@ export function FAQSection({ faqs }: FAQSectionProps) {
             <button
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
               aria-expanded={openIndex === i}
+              aria-controls={`faq-answer-${i}`}
+              id={`faq-question-${i}`}
               className="flex w-full items-center justify-between px-6 py-4 text-left text-lg font-medium text-gray-900 transition-colors hover:bg-gray-50 hover:text-blue-600"
             >
               <span>{faq.question}</span>
               <span
-                className={`ml-4 shrink-0 text-gray-400 transition-transform duration-200 motion-safe:transition-transform ${
+                className={`ml-4 shrink-0 text-gray-500 transition-transform duration-200 motion-safe:transition-transform ${
                   openIndex === i ? "rotate-180 text-blue-500" : ""
                 }`}
               >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </span>
             </button>
             <div
+              id={`faq-answer-${i}`}
+              role="region"
+              aria-labelledby={`faq-question-${i}`}
               className={`grid transition-[grid-template-rows] duration-300 motion-reduce:duration-0 ${
                 openIndex === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
               }`}

@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { HvacCalculator } from "@/components/tools/HvacCalculator";
 import { InternalLinks } from "@/components/content/InternalLinks";
+import { AfterCalculatorAd } from "@/components/ads/AdSlots";
 import { getHvacData } from "@/lib/hvac-calculator";
 
 export const metadata: Metadata = {
@@ -70,6 +71,8 @@ export default function HvacSizingCalculatorPage() {
             your home.
           </p>
         </div>
+
+        <AfterCalculatorAd />
 
         <InternalLinks category="hvac" />
       </div>

@@ -6,6 +6,7 @@ category: "roofing"
 keywords: ["signs you need a new roof", "roof replacement warning signs", "when to replace roof", "roof damage signs", "how long does a roof last"]
 author: "Editorial Team"
 image: "/images/blog/signs-new-roof.jpg"
+imageAlt: "Damaged roof shingles showing signs of wear and curling"
 faqs:
   - question: "How long does a roof typically last?"
     answer: "The lifespan of a roof depends on the material. Standard three-tab asphalt shingles last 15 to 20 years. Architectural (dimensional) asphalt shingles last 25 to 30 years. Metal roofs last 40 to 70 years, and slate or tile roofs can last 75 to 100 years or more. Climate, ventilation, and maintenance all affect how long your roof actually performs."

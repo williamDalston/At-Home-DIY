@@ -39,7 +39,7 @@ export function StickyTableOfContents({ headings }: StickyTableOfContentsProps) 
 
   return (
     <nav className="sticky top-24 hidden max-h-[calc(100vh-8rem)] overflow-y-auto lg:block">
-      <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+      <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-500">
         On this page
       </h2>
       <ul className="space-y-1.5 border-l-2 border-gray-100">

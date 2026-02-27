@@ -18,6 +18,7 @@ export interface ContentFrontmatter {
   keywords?: string[];
   author?: string;
   image?: string;
+  imageAlt?: string;
   faqs?: FAQ[];
   serviceType?: string;
   icon?: string;

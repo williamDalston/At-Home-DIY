@@ -19,6 +19,14 @@ const CATEGORY_TOOL_MAP: Record<string, { label: string; href: string }> = {
     label: "Energy Savings Quiz",
     href: "/tools/energy-savings-quiz",
   },
+  plumbing: {
+    label: "Project Planner",
+    href: "/tools/project-planner",
+  },
+  landscaping: {
+    label: "Project Planner",
+    href: "/tools/project-planner",
+  },
 };
 
 interface InternalLinksProps {

@@ -123,7 +123,7 @@ export default async function BlogCategoryPage({ params }: Props) {
                   {category}
                 </Badge>
                 {post.frontmatter.date && (
-                  <span className="text-xs text-gray-400">
+                  <span className="text-xs text-gray-500">
                     {new Date(post.frontmatter.date).toLocaleDateString(
                       "en-US",
                       { year: "numeric", month: "short", day: "numeric" }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ContactForm } from "@/components/forms/ContactForm";
-import { SITE_NAME, CONTACT_PHONE, CONTACT_EMAIL } from "@/lib/constants";
+import { SITE_NAME, CONTACT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -44,10 +44,6 @@ export default async function ContactPage({
                 Other Ways to Reach Us
               </h3>
               <div className="mt-4 space-y-4">
-                <div>
-                  <p className="text-sm font-medium text-gray-500">Phone</p>
-                  <p className="text-gray-900">{CONTACT_PHONE}</p>
-                </div>
                 <div>
                   <p className="text-sm font-medium text-gray-500">Email</p>
                   <p className="text-gray-900">{CONTACT_EMAIL}</p>

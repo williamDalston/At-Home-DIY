@@ -6,6 +6,7 @@ category: "plumbing"
 keywords: ["fix leaky faucet", "dripping faucet repair", "faucet repair DIY", "how to fix a faucet", "kitchen faucet leak"]
 author: "Editorial Team"
 image: "/images/blog/leaky-faucet.jpg"
+imageAlt: "Close-up of hands replacing a worn faucet washer"
 faqs:
   - question: "How much water does a leaky faucet waste?"
     answer: "A faucet dripping once per second wastes about 3,000 gallons of water per year — enough to fill a swimming pool. Even a slow drip of once every few seconds wastes hundreds of gallons annually and increases your water bill."

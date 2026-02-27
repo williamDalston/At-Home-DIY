@@ -6,6 +6,7 @@ category: "hvac"
 keywords: ["HVAC maintenance checklist", "furnace maintenance", "AC maintenance tips", "HVAC tune-up", "seasonal HVAC care", "air conditioner maintenance"]
 author: "Editorial Team"
 image: "/images/blog/hvac-maintenance.jpg"
+imageAlt: "HVAC technician servicing an outdoor air conditioning unit"
 faqs:
   - question: "How often should I change my HVAC filter?"
     answer: "For standard 1-inch disposable filters, change them every 30 to 90 days. Homes with pets, allergies, or high dust levels should change them monthly. Thicker 4-inch or 5-inch media filters can last 6 to 12 months. A dirty filter restricts airflow, forces the system to work harder, and increases energy bills by 5 to 15 percent."

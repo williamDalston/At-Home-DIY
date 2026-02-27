@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { EnergyQuiz } from "@/components/tools/EnergyQuiz";
 import { InternalLinks } from "@/components/content/InternalLinks";
+import { AfterCalculatorAd } from "@/components/ads/AdSlots";
 import { getEnergyQuizData } from "@/lib/energy-quiz";
 
 export const metadata: Metadata = {
@@ -69,7 +70,9 @@ export default function EnergySavingsQuizPage() {
           </p>
         </div>
 
-        <InternalLinks category="electrical" />
+        <AfterCalculatorAd />
+
+        <InternalLinks category="hvac" />
       </div>
     </Container>
   );

@@ -4,9 +4,9 @@ import { Users, Home, BookOpen, MapPin } from "lucide-react";
 import { AnimatedCounter } from "@/components/motion/AnimatedCounter";
 
 const counters = [
-  { target: 500, suffix: "+", label: "Local Contractors", Icon: Users },
-  { target: 10000, suffix: "+", label: "Homeowners Helped", Icon: Home },
-  { target: 9, suffix: "", label: "In-Depth Guides", Icon: BookOpen },
+  { target: 6, suffix: "", label: "Service Categories", Icon: Users },
+  { target: 14, suffix: "", label: "In-Depth Guides", Icon: BookOpen },
+  { target: 5, suffix: "", label: "Free Tools", Icon: Home },
   { target: 10, suffix: "", label: "Cities Covered", Icon: MapPin },
 ];
 

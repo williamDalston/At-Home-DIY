@@ -22,12 +22,15 @@ export function AnimatedCounter({
   const isInView = useInView(ref, { once: true });
   const shouldReduce = useReducedMotion();
   const [display, setDisplay] = useState("0");
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || hasAnimated.current) return;
+    hasAnimated.current = true;
 
     if (shouldReduce) {
-      setDisplay(target.toLocaleString());
+      // Use requestAnimationFrame to avoid synchronous setState in effect
+      requestAnimationFrame(() => setDisplay(target.toLocaleString()));
       return;
     }
 

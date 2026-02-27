@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CostCalculator } from "@/components/tools/CostCalculator";
 import { InternalLinks } from "@/components/content/InternalLinks";
+import { AfterCalculatorAd } from "@/components/ads/AdSlots";
 import { getCalculatorData } from "@/lib/calculator";
 
 export const metadata: Metadata = {
@@ -66,6 +67,8 @@ export default function RoofingCostEstimatorPage() {
             local roofing professionals who can inspect your roof in person.
           </p>
         </div>
+
+        <AfterCalculatorAd />
 
         <InternalLinks category="roofing" />
       </div>

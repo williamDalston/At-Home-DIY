@@ -6,6 +6,7 @@ category: "electrical"
 keywords: ["replace electrical outlet", "how to change an outlet", "DIY outlet replacement", "duplex outlet wiring", "electrical outlet installation"]
 author: "Editorial Team"
 image: "/images/blog/replace-electrical-outlet.jpg"
+imageAlt: "Electrician installing a new GFCI electrical outlet"
 faqs:
   - question: "When should I call an electrician instead of replacing an outlet myself?"
     answer: "Call a licensed electrician if you find aluminum wiring (silver-colored instead of copper), if the outlet box has more than four wires entering it, if you need to upgrade to a GFCI or 240-volt outlet, or if you see scorch marks or melted plastic inside the box. Also call a professional if your home was built before 1965 and has never had its wiring updated."

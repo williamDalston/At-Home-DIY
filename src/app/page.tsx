@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Shield, BadgeCheck, Clock, DollarSign } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -7,9 +8,17 @@ import { FadeInOnScroll } from "@/components/motion/FadeInOnScroll";
 import { StaggeredCards, StaggeredItem } from "@/components/motion/StaggeredCards";
 import { SocialProofCounters } from "@/components/engagement/SocialProofCounters";
 import { Testimonials } from "@/components/engagement/Testimonials";
+import { HomepageAd } from "@/components/ads/AdSlots";
 import { SERVICE_CATEGORIES } from "@/lib/constants";
 import { SERVICE_ICONS, TOOL_ICONS } from "@/lib/icons";
 import { getAllContent } from "@/lib/content";
+
+const trustBadges = [
+  { label: "Free Quotes", Icon: DollarSign },
+  { label: "No Obligation", Icon: Shield },
+  { label: "Licensed Pros", Icon: BadgeCheck },
+  { label: "Fast Response", Icon: Clock },
+];
 
 const tools = [
   {
@@ -90,7 +99,19 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      <SectionDivider variant="wave" color="#ffffff" />
+      {/* Trust Badges */}
+      <section className="border-b border-gray-100 bg-white py-6">
+        <Container>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+            {trustBadges.map(({ label, Icon }) => (
+              <div key={label} className="flex items-center gap-2 text-sm font-medium text-gray-700">
+                <Icon className="h-5 w-5 text-accent-500" />
+                <span>{label}</span>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
 
       {/* Service Categories */}
       <section className="py-16">
@@ -158,7 +179,7 @@ export default async function HomePage() {
                       {post.frontmatter.description}
                     </p>
                     {post.frontmatter.date && (
-                      <p className="mt-3 text-xs text-gray-400">
+                      <p className="mt-3 text-xs text-gray-500">
                         {new Date(post.frontmatter.date).toLocaleDateString(
                           "en-US",
                           {
@@ -178,6 +199,11 @@ export default async function HomePage() {
       )}
 
       <SectionDivider variant="angle" color="#ffffff" flip />
+
+      {/* Ad between blog and tools sections */}
+      <Container>
+        <HomepageAd />
+      </Container>
 
       {/* Tools Showcase */}
       <section className="py-16">

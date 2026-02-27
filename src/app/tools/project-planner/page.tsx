@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ProjectPlanner } from "@/components/tools/ProjectPlanner";
+import { AfterCalculatorAd } from "@/components/ads/AdSlots";
 import { getChecklistData } from "@/lib/project-checklist";
 
 export const metadata: Metadata = {
@@ -66,6 +67,8 @@ export default function ProjectPlannerPage() {
             licensed professionals in your area who can handle the heavy lifting.
           </p>
         </div>
+
+        <AfterCalculatorAd />
       </div>
     </Container>
   );

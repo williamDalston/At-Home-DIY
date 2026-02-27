@@ -9,6 +9,7 @@ import { FAQSection } from "./FAQSection";
 import { ShareButtons } from "./ShareButtons";
 import { RelatedPosts } from "./RelatedPosts";
 import { InternalLinks } from "./InternalLinks";
+import { InArticleAd, SidebarAd } from "@/components/ads/AdSlots";
 import { extractHeadings } from "@/lib/markdown";
 import { estimateReadingTime } from "@/lib/reading-time";
 import type { ContentItem } from "@/lib/content";
@@ -59,7 +60,7 @@ export function ArticleLayout({
               <p className="mt-2 text-gray-600">By {frontmatter.author}</p>
             )}
             {frontmatter.lastModified && (
-              <p className="mt-1 text-xs text-gray-400">
+              <p className="mt-1 text-xs text-gray-500">
                 Last updated:{" "}
                 {new Date(frontmatter.lastModified).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -79,6 +80,8 @@ export function ArticleLayout({
             className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-a:text-blue-600 prose-img:rounded-lg"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
+
+          <InArticleAd />
 
           {/* CTA with gradient border */}
           <div className="mt-10 rounded-xl bg-gradient-to-r from-blue-500 to-accent-400 p-[2px]">
@@ -118,6 +121,7 @@ export function ArticleLayout({
         {/* Desktop Sticky TOC */}
         <aside className="hidden lg:block">
           <StickyTableOfContents headings={headings} />
+          <SidebarAd />
         </aside>
       </div>
     </Container>

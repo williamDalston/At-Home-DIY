@@ -6,7 +6,7 @@ const resend = process.env.RESEND_API_KEY
 
 const FROM_ADDRESS = process.env.RESEND_FROM_EMAIL || "info@alstonanalytics.com";
 const ADMIN_EMAIL = process.env.CONTACT_EMAIL || "info@alstonanalytics.com";
-const SITE_URL = process.env.SITE_URL || "https://www.fixitfinder.com";
+const SITE_URL = process.env.SITE_URL || "https://www.fixitfinder.space";
 
 interface SendEmailOptions {
   subject: string;
@@ -64,7 +64,7 @@ function brandedWrapper(content: string): string {
         <tr><td style="background-color:#f9fafb;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 12px 12px;padding:20px 32px;text-align:center;">
           <p style="margin:0;font-size:12px;color:#9ca3af;">
             &copy; ${new Date().getFullYear()} FixIt Finder &middot;
-            <a href="${SITE_URL}" style="color:#2563eb;text-decoration:none;">fixitfinder.com</a>
+            <a href="${SITE_URL}" style="color:#2563eb;text-decoration:none;">fixitfinder.space</a>
           </p>
         </td></tr>
       </table>

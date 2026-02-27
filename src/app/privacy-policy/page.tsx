@@ -59,6 +59,15 @@ export default function PrivacyPolicyPage() {
             including pages visited, time on site, browser type, and approximate
             location. Google Analytics uses cookies to collect this data.
           </li>
+          <li>
+            <strong>Advertising:</strong> We use Google AdSense to display
+            advertisements. Google may use cookies and web beacons to serve ads
+            based on your prior visits to this or other websites. You can opt
+            out of personalized advertising by visiting{" "}
+            <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">
+              Google Ads Settings
+            </a>.
+          </li>
         </ul>
 
         <h2>How We Use Your Information</h2>
@@ -91,6 +100,10 @@ export default function PrivacyPolicyPage() {
             <strong>Analytics cookies:</strong> Google Analytics cookies that
             help us understand site usage (can be declined via the cookie
             banner).
+          </li>
+          <li>
+            <strong>Advertising cookies:</strong> Google AdSense cookies used to
+            display relevant advertisements and measure ad performance.
           </li>
         </ul>
         <p>

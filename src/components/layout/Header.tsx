@@ -28,14 +28,14 @@ export function Header() {
             ))}
             <Link
               href="/search"
-              className="rounded-md p-2 text-gray-400 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+              className="rounded-md p-2 text-gray-500 transition-colors hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               aria-label="Search"
             >
               <Search className="h-5 w-5" />
             </Link>
             <Link
               href="/contact"
-              className="rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-blue-600/20 transition-all hover:from-blue-700 hover:to-blue-800 hover:shadow-lg hover:shadow-blue-600/30"
+              className="rounded-lg bg-gradient-to-r from-accent-500 to-accent-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-accent-500/20 transition-all hover:from-accent-600 hover:to-accent-700 hover:shadow-lg hover:shadow-accent-500/30"
             >
               Get a Free Quote
             </Link>

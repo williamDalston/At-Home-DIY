@@ -7,12 +7,11 @@ import { FAQSection } from "@/components/content/FAQSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getContentBySlug } from "@/lib/content";
 import {
-  getAllLocations,
   getLocationBySlug,
   getServiceLocationContent,
   generateCityServiceParams,
 } from "@/lib/locations";
-import { BASE_URL, CONTACT_PHONE } from "@/lib/constants";
+import { BASE_URL, CONTACT_EMAIL } from "@/lib/constants";
 
 interface Props {
   params: Promise<{ service: string; location: string }>;
@@ -172,7 +171,7 @@ export default async function CityLandingPage({ params }: Props) {
           "@type": "LocalBusiness",
           name: `${svc.frontmatter.title} - ${loc.city}, ${loc.state}`,
           url: `${BASE_URL}/services/${service}/${location}`,
-          telephone: CONTACT_PHONE,
+          email: CONTACT_EMAIL,
           address: {
             "@type": "PostalAddress",
             addressLocality: loc.city,

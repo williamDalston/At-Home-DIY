@@ -205,10 +205,13 @@ export function ContactForm({
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+        className="w-full rounded-lg bg-blue-600 px-6 py-3.5 font-semibold text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
       >
         {status === "loading" ? "Sending..." : "Submit Request"}
       </button>
+      <p className="text-center text-xs text-gray-500">
+        100% free &middot; No obligation &middot; Licensed professionals only
+      </p>
     </form>
   );
 }

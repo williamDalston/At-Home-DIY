@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             url: `/api/og?title=${encodeURIComponent(post.frontmatter.title)}&subtitle=${encodeURIComponent(post.frontmatter.description || "")}&category=${encodeURIComponent(post.frontmatter.category || "")}`,
             width: 1200,
             height: 630,
-            alt: post.frontmatter.title,
+            alt: post.frontmatter.imageAlt || post.frontmatter.title,
           },
         ],
       },

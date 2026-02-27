@@ -1,31 +1,36 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useSyncExternalStore } from "react";
+
+function getConsent() {
+  if (typeof window === "undefined") return "unknown";
+  return localStorage.getItem("cookie-consent") ?? "";
+}
+
+const emptySubscribe = () => () => {};
 
 export function CookieConsent() {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
-    if (!consent) {
-      setVisible(true);
-    }
-  }, []);
+  const consent = useSyncExternalStore(emptySubscribe, getConsent, () => "unknown");
+  const [dismissed, setDismissed] = useState(false);
 
   const accept = () => {
     localStorage.setItem("cookie-consent", "accepted");
-    setVisible(false);
+    setDismissed(true);
   };
 
   const decline = () => {
     localStorage.setItem("cookie-consent", "declined");
-    setVisible(false);
+    setDismissed(true);
   };
 
-  if (!visible) return null;
+  if (dismissed || consent === "unknown" || consent !== "") return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white p-4 shadow-lg sm:p-6">
+    <div
+      className="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white p-4 shadow-lg sm:p-6"
+      role="dialog"
+      aria-label="Cookie consent"
+    >
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 sm:flex-row">
         <p className="flex-1 text-sm text-gray-600">
           We use cookies to improve your experience and analyze site traffic.

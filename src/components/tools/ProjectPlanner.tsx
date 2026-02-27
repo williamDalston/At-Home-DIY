@@ -1,21 +1,61 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useSyncExternalStore } from "react";
 import type { Checklist } from "@/lib/project-checklist";
+
+const STORAGE_KEY = "project-planner-checked";
+
+function loadChecked(): Record<string, Set<number>> {
+  if (typeof window === "undefined") return {};
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return {};
+    const parsed: Record<string, number[]> = JSON.parse(raw);
+    const result: Record<string, Set<number>> = {};
+    for (const [key, arr] of Object.entries(parsed)) {
+      result[key] = new Set(arr);
+    }
+    return result;
+  } catch {
+    return {};
+  }
+}
+
+function saveChecked(checked: Record<string, Set<number>>) {
+  try {
+    const serializable: Record<string, number[]> = {};
+    for (const [key, set] of Object.entries(checked)) {
+      serializable[key] = Array.from(set);
+    }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(serializable));
+  } catch {
+    // localStorage unavailable
+  }
+}
 
 interface ProjectPlannerProps {
   checklists: Checklist[];
 }
 
+const emptySubscribe = () => () => {};
+
 export function ProjectPlanner({ checklists }: ProjectPlannerProps) {
   const [selectedId, setSelectedId] = useState(checklists[0]?.id ?? "");
-  const [checked, setChecked] = useState<Record<string, Set<number>>>({});
+  const isClient = useSyncExternalStore(emptySubscribe, () => true, () => false);
+  const [checked, setChecked] = useState<Record<string, Set<number>>>(() =>
+    typeof window !== "undefined" ? loadChecked() : {}
+  );
 
   const currentChecklist = checklists.find((c) => c.id === selectedId);
   const currentChecked = checked[selectedId] ?? new Set<number>();
   const progress = currentChecklist
     ? (currentChecked.size / currentChecklist.items.length) * 100
     : 0;
+
+  const persistChecked = useCallback((next: Record<string, Set<number>>) => {
+    saveChecked(next);
+    return next;
+  }, []);
 
   const toggleItem = (index: number) => {
     setChecked((prev) => {
@@ -25,13 +65,19 @@ export function ProjectPlanner({ checklists }: ProjectPlannerProps) {
       } else {
         current.add(index);
       }
-      return { ...prev, [selectedId]: current };
+      const next = { ...prev, [selectedId]: current };
+      return persistChecked(next);
     });
   };
 
   const resetChecklist = () => {
-    setChecked((prev) => ({ ...prev, [selectedId]: new Set<number>() }));
+    setChecked((prev) => {
+      const next = { ...prev, [selectedId]: new Set<number>() };
+      return persistChecked(next);
+    });
   };
+
+  if (!isClient) return null;
 
   return (
     <div className="space-y-6">

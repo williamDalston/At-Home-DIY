@@ -20,11 +20,11 @@ export default function BlogPostLoading() {
 
           {/* Content lines */}
           <div className="mt-8 space-y-3">
-            {Array.from({ length: 12 }).map((_, i) => (
+            {[95, 82, 100, 78, 90, 85, 100, 76, 92, 88, 100, 80].map((w, i) => (
               <div
                 key={i}
                 className="h-4 animate-pulse rounded bg-gray-200"
-                style={{ width: `${75 + Math.random() * 25}%` }}
+                style={{ width: `${w}%` }}
               />
             ))}
           </div>
@@ -34,11 +34,11 @@ export default function BlogPostLoading() {
         <div className="hidden lg:block">
           <div className="sticky top-24 space-y-2">
             <div className="h-3 w-20 animate-pulse rounded bg-gray-200" />
-            {Array.from({ length: 5 }).map((_, i) => (
+            {[80, 65, 90, 72, 85].map((w, i) => (
               <div
                 key={i}
                 className="h-4 animate-pulse rounded bg-gray-200"
-                style={{ width: `${60 + Math.random() * 40}%` }}
+                style={{ width: `${w}%` }}
               />
             ))}
           </div>

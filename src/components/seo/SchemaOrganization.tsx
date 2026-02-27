@@ -1,5 +1,5 @@
 import { JsonLd } from "./JsonLd";
-import { SITE_NAME, BASE_URL, CONTACT_PHONE } from "@/lib/constants";
+import { SITE_NAME, BASE_URL, CONTACT_EMAIL } from "@/lib/constants";
 
 export function SchemaOrganization() {
   return (
@@ -12,7 +12,7 @@ export function SchemaOrganization() {
         logo: `${BASE_URL}/logo.png`,
         contactPoint: {
           "@type": "ContactPoint",
-          telephone: CONTACT_PHONE,
+          email: CONTACT_EMAIL,
           contactType: "Customer Service",
         },
       }}

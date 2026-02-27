@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { PaintingCalculator } from "@/components/tools/PaintingCalculator";
 import { InternalLinks } from "@/components/content/InternalLinks";
+import { AfterCalculatorAd } from "@/components/ads/AdSlots";
 import { getPaintingData } from "@/lib/painting-calculator";
 
 export const metadata: Metadata = {
@@ -69,6 +70,8 @@ export default function PaintingCostEstimatorPage() {
             professionals to compare.
           </p>
         </div>
+
+        <AfterCalculatorAd />
 
         <InternalLinks category="painting" />
       </div>

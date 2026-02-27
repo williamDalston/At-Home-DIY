@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  other: {
+    "google-adsense-account": "ca-pub-2214618538122354",
+  },
   alternates: {
     types: {
       "application/rss+xml": "/feed.xml",
@@ -53,6 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const gaId = process.env.GA_MEASUREMENT_ID;
+  const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
   return (
     <html lang="en">
@@ -87,6 +91,14 @@ export default function RootLayout({
               `}
             </Script>
           </>
+        )}
+
+        {adsenseId && (
+          <Script
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+          />
         )}
       </body>
     </html>

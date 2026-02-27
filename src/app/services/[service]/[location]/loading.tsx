@@ -11,11 +11,11 @@ export default function LocationServiceLoading() {
 
         {/* Content lines */}
         <div className="mt-8 space-y-3">
-          {Array.from({ length: 8 }).map((_, i) => (
+          {[92, 85, 100, 78, 95, 82, 100, 88].map((w, i) => (
             <div
               key={i}
               className="h-4 animate-pulse rounded bg-gray-200"
-              style={{ width: `${70 + Math.random() * 30}%` }}
+              style={{ width: `${w}%` }}
             />
           ))}
         </div>

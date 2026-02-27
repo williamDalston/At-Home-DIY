@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { getAllContent } from "@/lib/content";
+import { SERVICE_CATEGORIES } from "@/lib/constants";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -52,6 +53,22 @@ export default async function BlogIndexPage({
         Expert tips, step-by-step guides, and maintenance checklists for homeowners.
       </p>
 
+      {/* Category filters */}
+      <div className="mt-6 flex flex-wrap gap-2">
+        <span className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-700">
+          All
+        </span>
+        {SERVICE_CATEGORIES.map((s) => (
+          <Link
+            key={s.slug}
+            href={`/blog/category/${s.slug}`}
+            className="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+          >
+            {s.label}
+          </Link>
+        ))}
+      </div>
+
       {posts.length === 0 ? (
         <p className="mt-10 text-center text-gray-500">
           No posts yet. Check back soon!
@@ -72,7 +89,7 @@ export default async function BlogIndexPage({
                     </Badge>
                   )}
                   {post.frontmatter.date && (
-                    <span className="text-xs text-gray-400">
+                    <span className="text-xs text-gray-500">
                       {new Date(post.frontmatter.date).toLocaleDateString(
                         "en-US",
                         { year: "numeric", month: "short", day: "numeric" }
@@ -143,7 +160,7 @@ export default async function BlogIndexPage({
           )}
 
           {/* Post count */}
-          <p className="mt-4 text-center text-sm text-gray-400">
+          <p className="mt-4 text-center text-sm text-gray-500">
             Showing {start + 1}–{Math.min(start + POSTS_PER_PAGE, posts.length)} of {posts.length} posts
           </p>
         </>

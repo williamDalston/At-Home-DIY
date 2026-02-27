@@ -33,6 +33,7 @@ export function SectionDivider({
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
         className="block h-12 w-full sm:h-16 lg:h-20"
+        aria-hidden="true"
       >
         <path d={paths[variant]} fill={color} />
       </svg>

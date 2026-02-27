@@ -60,7 +60,7 @@ export function BackToTopButton() {
               className="transition-[stroke-dashoffset] duration-150"
             />
           </svg>
-          <svg className="relative h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="relative h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 15l7-7 7 7" />
           </svg>
         </motion.button>

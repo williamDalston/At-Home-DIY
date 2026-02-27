@@ -34,7 +34,7 @@ export function NewsletterSignup({ variant = "inline" }: NewsletterSignupProps) 
 
       if (res.ok) {
         setStatus("success");
-        setMessage("You're subscribed! Check your inbox for confirmation.");
+        setMessage("Thanks for subscribing! You'll receive our next newsletter.");
         setEmail("");
       } else {
         setStatus("error");
@@ -58,7 +58,7 @@ export function NewsletterSignup({ variant = "inline" }: NewsletterSignupProps) 
           Newsletter
         </h4>
         <p className="mt-2 text-sm text-gray-400">
-          Get DIY tips and home improvement deals in your inbox.
+          Weekly DIY tips and cost-saving guides. No spam, unsubscribe anytime.
         </p>
         <form onSubmit={handleSubmit} className="mt-3 flex gap-2" noValidate>
           <label htmlFor={inputId} className="sr-only">Email address</label>
@@ -132,7 +132,7 @@ export function NewsletterSignup({ variant = "inline" }: NewsletterSignupProps) 
           {status === "error" && (
             <p id={errorId} className="mt-3 text-sm text-red-600" role="alert">{message}</p>
           )}
-          <p className="mt-3 text-xs text-gray-400">
+          <p className="mt-3 text-xs text-gray-500">
             No spam, ever. Unsubscribe anytime.
           </p>
         </div>

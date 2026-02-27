@@ -6,6 +6,7 @@ category: "landscaping"
 keywords: ["landscaping on a budget", "cheap landscaping ideas", "budget yard makeover", "affordable landscaping", "DIY landscaping tips", "low cost curb appeal"]
 author: "Editorial Team"
 image: "/images/blog/landscaping-budget.jpg"
+imageAlt: "Beautiful front yard with native plants and mulch landscaping"
 faqs:
   - question: "How much does basic landscaping cost?"
     answer: "A professional landscaping overhaul can cost $3,000 to $15,000 or more, but you can make a dramatic improvement for $200 to $500 by doing the work yourself. A few bags of mulch, some native perennials from a local nursery, and basic edging materials are all most yards need to look well-maintained and attractive."
