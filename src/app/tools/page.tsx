@@ -7,7 +7,31 @@ import { TOOL_ICONS } from "@/lib/icons";
 export const metadata: Metadata = {
   title: "Tools & Calculators",
   description:
-    "Free home improvement tools and cost calculators. Estimate roofing costs, plan your projects, and budget smarter.",
+    "Free home improvement tools and cost calculators. Estimate roofing costs, calculate painting expenses, size your HVAC system, and plan your projects.",
+  keywords: [
+    "home improvement calculator",
+    "roofing cost estimator",
+    "painting cost calculator",
+    "HVAC sizing calculator",
+    "project planner",
+    "home repair tools",
+  ],
+  alternates: {
+    canonical: "/tools",
+  },
+  openGraph: {
+    title: "Free Tools & Calculators | FixIt Finder",
+    description:
+      "Free home improvement tools and cost calculators. Estimate costs, plan projects, and budget smarter.",
+    images: [
+      {
+        url: "/api/og?title=Tools%20%26%20Calculators&subtitle=Free%20home%20improvement%20tools&category=tools",
+        width: 1200,
+        height: 630,
+        alt: "FixIt Finder Tools & Calculators",
+      },
+    ],
+  },
 };
 
 const tools = [

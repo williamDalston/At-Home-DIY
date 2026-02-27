@@ -8,7 +8,32 @@ import { getAllContent } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Home Services",
   description:
-    "Find trusted local professionals for plumbing, electrical, roofing, and more. Get free quotes from licensed contractors in your area.",
+    "Find trusted local professionals for plumbing, electrical, roofing, HVAC, painting, and landscaping. Get free quotes from licensed contractors in your area.",
+  keywords: [
+    "home services",
+    "local contractors",
+    "plumbing services",
+    "electrical services",
+    "roofing contractors",
+    "HVAC services",
+    "home repair",
+  ],
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Home Services | FixIt Finder",
+    description:
+      "Find trusted local professionals for plumbing, electrical, roofing, HVAC, painting, and landscaping. Get free quotes from licensed contractors.",
+    images: [
+      {
+        url: "/api/og?title=Home%20Services&subtitle=Find%20trusted%20local%20professionals&category=services",
+        width: 1200,
+        height: 630,
+        alt: "FixIt Finder Home Services",
+      },
+    ],
+  },
 };
 
 export default async function ServicesIndexPage() {

@@ -17,6 +17,22 @@ export const metadata: Metadata = {
     "air conditioner size calculator",
     "hvac cost estimator",
   ],
+  alternates: {
+    canonical: "/tools/hvac-sizing-calculator",
+  },
+  openGraph: {
+    title: "HVAC Sizing Calculator | FixIt Finder",
+    description:
+      "Free HVAC sizing calculator. Determine the right BTU and tonnage for your home based on square footage and climate zone.",
+    images: [
+      {
+        url: "/api/og?title=HVAC%20Sizing%20Calculator&subtitle=Find%20the%20right%20system%20size&category=hvac",
+        width: 1200,
+        height: 630,
+        alt: "HVAC Sizing Calculator",
+      },
+    ],
+  },
 };
 
 export default function HvacSizingCalculatorPage() {

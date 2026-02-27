@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Shield, BadgeCheck, Clock, DollarSign } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -9,9 +10,36 @@ import { StaggeredCards, StaggeredItem } from "@/components/motion/StaggeredCard
 import { SocialProofCounters } from "@/components/engagement/SocialProofCounters";
 import { Testimonials } from "@/components/engagement/Testimonials";
 import { HomepageAd } from "@/components/ads/AdSlots";
+import { SchemaWebSite } from "@/components/seo/SchemaWebSite";
 import { SERVICE_CATEGORIES } from "@/lib/constants";
 import { SERVICE_ICONS, TOOL_ICONS } from "@/lib/icons";
 import { getAllContent } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: "FixIt Finder - Expert Home Repair Guides & Local Service Pros",
+  description:
+    "Expert DIY guides, cost calculators, and trusted local contractors for plumbing, electrical, roofing, HVAC, painting, and landscaping. Get free quotes today.",
+  keywords: [
+    "home repair guides",
+    "DIY home improvement",
+    "local contractors",
+    "plumbing services",
+    "electrical services",
+    "roofing contractors",
+    "HVAC services",
+    "home maintenance",
+    "free contractor quotes",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "FixIt Finder - Expert Home Repair Guides & Local Service Pros",
+    description:
+      "Expert DIY guides, cost calculators, and trusted local contractors. Get free quotes for plumbing, electrical, roofing, and more.",
+    type: "website",
+  },
+};
 
 const trustBadges = [
   { label: "Free Quotes", Icon: DollarSign },
@@ -293,6 +321,8 @@ export default async function HomePage() {
           </FadeInOnScroll>
         </Container>
       </section>
+
+      <SchemaWebSite />
     </>
   );
 }

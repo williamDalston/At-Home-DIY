@@ -34,11 +34,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const svc = SERVICE_CATEGORIES.find((s) => s.slug === category);
   if (!svc) return {};
 
+  const title = `${svc.label} Guides & Tips`;
+  const description = `Expert ${svc.label.toLowerCase()} guides, DIY tips, and maintenance checklists for homeowners. Learn how to tackle ${svc.label.toLowerCase()} projects yourself.`;
+
   return {
-    title: `${svc.label} Guides & Tips`,
-    description: `Expert ${svc.label.toLowerCase()} guides, DIY tips, and maintenance checklists for homeowners.`,
+    title,
+    description,
+    keywords: [
+      `${svc.label.toLowerCase()} guides`,
+      `${svc.label.toLowerCase()} DIY`,
+      `${svc.label.toLowerCase()} tips`,
+      `${svc.label.toLowerCase()} maintenance`,
+      `how to ${svc.label.toLowerCase()}`,
+    ],
     alternates: {
       canonical: `/blog/category/${category}`,
+    },
+    openGraph: {
+      title: `${title} | FixIt Finder`,
+      description,
+      images: [
+        {
+          url: `/api/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(`DIY guides and tips`)}&category=${category}`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
   };
 }

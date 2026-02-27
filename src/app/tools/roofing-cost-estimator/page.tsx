@@ -16,6 +16,22 @@ export const metadata: Metadata = {
     "roof estimate",
     "how much does a new roof cost",
   ],
+  alternates: {
+    canonical: "/tools/roofing-cost-estimator",
+  },
+  openGraph: {
+    title: "Roofing Cost Estimator | FixIt Finder",
+    description:
+      "Free roofing cost calculator. Estimate the cost of your roofing project based on area, materials, pitch, and location.",
+    images: [
+      {
+        url: "/api/og?title=Roofing%20Cost%20Estimator&subtitle=Free%20roofing%20calculator&category=roofing",
+        width: 1200,
+        height: 630,
+        alt: "Roofing Cost Estimator",
+      },
+    ],
+  },
 };
 
 export default function RoofingCostEstimatorPage() {

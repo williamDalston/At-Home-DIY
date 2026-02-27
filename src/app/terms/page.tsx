@@ -6,6 +6,9 @@ import { SITE_NAME, CONTACT_EMAIL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: `Terms of service for ${SITE_NAME}. Please read these terms carefully before using our website.`,
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {

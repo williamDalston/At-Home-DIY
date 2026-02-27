@@ -6,7 +6,29 @@ import { SITE_NAME } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `Learn about ${SITE_NAME} - connecting homeowners with trusted local service professionals and providing expert DIY guides.`,
+  description: `Learn about ${SITE_NAME} - connecting homeowners with trusted local service professionals and providing expert DIY guides for home repairs and maintenance.`,
+  keywords: [
+    "about FixIt Finder",
+    "home service directory",
+    "DIY home repair",
+    "trusted contractors",
+    "home improvement help",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: `About Us | ${SITE_NAME}`,
+    description: `Learn about ${SITE_NAME} - connecting homeowners with trusted local service professionals and providing expert DIY guides.`,
+    images: [
+      {
+        url: "/api/og?title=About%20Us&subtitle=Connecting%20homeowners%20with%20trusted%20pros&category=about",
+        width: 1200,
+        height: 630,
+        alt: `About ${SITE_NAME}`,
+      },
+    ],
+  },
 };
 
 export default function AboutPage() {

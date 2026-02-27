@@ -16,6 +16,22 @@ export const metadata: Metadata = {
     "bathroom renovation steps",
     "project planning tool",
   ],
+  alternates: {
+    canonical: "/tools/project-planner",
+  },
+  openGraph: {
+    title: "Project Planner & Checklists | FixIt Finder",
+    description:
+      "Free home improvement project planner with step-by-step checklists for kitchen remodels, bathroom renovations, and more.",
+    images: [
+      {
+        url: "/api/og?title=Project%20Planner&subtitle=Step-by-step%20checklists&category=planning",
+        width: 1200,
+        height: 630,
+        alt: "Project Planner & Checklists",
+      },
+    ],
+  },
 };
 
 export default function ProjectPlannerPage() {

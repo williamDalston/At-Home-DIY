@@ -16,6 +16,22 @@ export const metadata: Metadata = {
     "how much does painting cost",
     "interior painting cost",
   ],
+  alternates: {
+    canonical: "/tools/painting-cost-estimator",
+  },
+  openGraph: {
+    title: "Painting Cost Estimator | FixIt Finder",
+    description:
+      "Free painting cost calculator. Estimate interior or exterior painting costs based on wall area, paint type, and surface condition.",
+    images: [
+      {
+        url: "/api/og?title=Painting%20Cost%20Estimator&subtitle=Free%20painting%20calculator&category=painting",
+        width: 1200,
+        height: 630,
+        alt: "Painting Cost Estimator",
+      },
+    ],
+  },
 };
 
 export default function PaintingCostEstimatorPage() {

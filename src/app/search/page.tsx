@@ -5,7 +5,14 @@ import { SearchClient } from "@/components/search/SearchClient";
 
 export const metadata: Metadata = {
   title: "Search",
-  description: "Search our blog guides and home service listings.",
+  description: "Search our DIY guides, home service information, and cost calculators.",
+  alternates: {
+    canonical: "/search",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function SearchPage() {

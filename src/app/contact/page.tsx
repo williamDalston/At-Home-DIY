@@ -6,7 +6,29 @@ import { SITE_NAME, CONTACT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: `Get a free quote from trusted home service professionals. Contact ${SITE_NAME} for plumbing, electrical, roofing, and more.`,
+  description: `Get a free quote from trusted home service professionals. Contact ${SITE_NAME} for plumbing, electrical, roofing, HVAC, painting, and landscaping services.`,
+  keywords: [
+    "free quote",
+    "contact contractor",
+    "home service quote",
+    "request estimate",
+    "hire contractor",
+  ],
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: `Contact Us | ${SITE_NAME}`,
+    description: `Get a free quote from trusted home service professionals. Contact ${SITE_NAME} for plumbing, electrical, roofing, and more.`,
+    images: [
+      {
+        url: "/api/og?title=Contact%20Us&subtitle=Get%20a%20free%20quote%20today&category=contact",
+        width: 1200,
+        height: 630,
+        alt: `Contact ${SITE_NAME}`,
+      },
+    ],
+  },
 };
 
 export default async function ContactPage({

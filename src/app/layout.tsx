@@ -67,15 +67,6 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
-        {adsenseId && (
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
-            crossOrigin="anonymous"
-          />
-        )}
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -91,6 +82,15 @@ export default function RootLayout({
         <BackToTopButton />
         <CookieConsent />
         <SearchKeyboardShortcut />
+
+        {adsenseId && (
+          <Script
+            id="google-adsense"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
+            strategy="afterInteractive"
+            crossOrigin="anonymous"
+          />
+        )}
 
         {gaId && (
           <>

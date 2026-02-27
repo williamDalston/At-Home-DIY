@@ -17,6 +17,22 @@ export const metadata: Metadata = {
     "home energy audit",
     "energy savings tips",
   ],
+  alternates: {
+    canonical: "/tools/energy-savings-quiz",
+  },
+  openGraph: {
+    title: "Home Energy Savings Quiz | FixIt Finder",
+    description:
+      "Take our free home energy quiz to discover ways to save on energy bills. Get personalized recommendations.",
+    images: [
+      {
+        url: "/api/og?title=Energy%20Savings%20Quiz&subtitle=Discover%20ways%20to%20save&category=energy",
+        width: 1200,
+        height: 630,
+        alt: "Home Energy Savings Quiz",
+      },
+    ],
+  },
 };
 
 export default function EnergySavingsQuizPage() {
