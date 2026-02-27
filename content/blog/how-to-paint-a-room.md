@@ -6,7 +6,7 @@ category: "painting"
 keywords: ["how to paint a room", "painting a room step by step", "DIY room painting", "interior painting tips", "paint a room like a pro"]
 author: "Editorial Team"
 image: "/images/blog/paint-a-room.jpg"
-imageAlt: "Person rolling paint onto a bedroom wall with blue painter tape on trim"
+imageAlt: "DIY painter rolling sky blue paint onto a room wall with drop cloth and paint cans on the floor"
 faqs:
   - question: "How long does it take for paint to dry between coats?"
     answer: "Latex paint is typically dry to the touch in 1 to 2 hours and ready for a second coat in 2 to 4 hours. Oil-based paint takes 6 to 8 hours to dry and 24 hours before recoating. Temperature and humidity affect drying time — paint dries slower in cold, humid conditions. Always check the manufacturer's recommendation on the can."

@@ -6,7 +6,7 @@ category: "electrical"
 keywords: ["how to install a ceiling fan", "ceiling fan installation", "DIY ceiling fan", "replace light fixture with ceiling fan", "ceiling fan wiring"]
 author: "Editorial Team"
 image: "/images/blog/install-ceiling-fan.jpg"
-imageAlt: "Ceiling fan mounted in a living room with light kit attached"
+imageAlt: "Five-blade ceiling fan with brushed nickel motor mounted on a white ceiling"
 faqs:
   - question: "Can I install a ceiling fan where a light fixture is?"
     answer: "Yes, but only if the electrical box is rated to support a ceiling fan. Standard light fixture boxes are designed to hold 15 to 25 pounds, while ceiling fans weigh 30 to 50 pounds or more and create dynamic forces when spinning. You must replace a standard box with a fan-rated brace box before mounting a fan. Fan-rated boxes are clearly labeled and typically cost $15 to $30."

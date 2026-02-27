@@ -27,7 +27,11 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   other: {
     "google-adsense-account": "ca-pub-2214618538122354",
@@ -43,6 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@fixitfinder",
+    title: `${SITE_NAME} - Home Services & DIY Guides`,
+    description: SITE_DESCRIPTION,
   },
   robots: {
     index: true,
@@ -60,6 +67,15 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        {adsenseId && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
+            crossOrigin="anonymous"
+          />
+        )}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -93,13 +109,6 @@ export default function RootLayout({
           </>
         )}
 
-        {adsenseId && (
-          <Script
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
-            strategy="afterInteractive"
-            crossOrigin="anonymous"
-          />
-        )}
       </body>
     </html>
   );

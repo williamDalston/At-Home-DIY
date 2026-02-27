@@ -6,6 +6,8 @@ import rehypeStringify from "rehype-stringify";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
+import { visit } from "unist-util-visit";
+import type { Root, Element } from "hast";
 
 // Extend the default schema to allow id attributes (needed for heading anchors)
 // and class attributes (for styling), while still blocking scripts/events.
@@ -15,8 +17,30 @@ const sanitizeSchema = {
     ...defaultSchema.attributes,
     "*": [...(defaultSchema.attributes?.["*"] || []), "id", "className"],
     a: [...(defaultSchema.attributes?.a || []), "href", "target", "rel"],
+    img: [
+      ...(defaultSchema.attributes?.img || []),
+      "loading",
+      "decoding",
+      "alt",
+      "src",
+      "width",
+      "height",
+    ],
   },
 };
+
+/** Rehype plugin: adds loading="lazy" and decoding="async" to all <img> tags */
+function rehypeLazyImages() {
+  return (tree: Root) => {
+    visit(tree, "element", (node: Element) => {
+      if (node.tagName === "img") {
+        node.properties = node.properties || {};
+        node.properties.loading = "lazy";
+        node.properties.decoding = "async";
+      }
+    });
+  };
+}
 
 export async function markdownToHtml(markdown: string): Promise<string> {
   const result = await unified()
@@ -26,6 +50,7 @@ export async function markdownToHtml(markdown: string): Promise<string> {
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, { behavior: "wrap" })
     .use(rehypeSanitize, sanitizeSchema)
+    .use(rehypeLazyImages)
     .use(rehypeStringify)
     .process(markdown);
   return String(result);

@@ -6,7 +6,7 @@ category: "electrical"
 keywords: ["home energy audit", "DIY energy audit", "how to find air leaks", "reduce energy bills", "home energy efficiency", "thermal leak detector"]
 author: "Editorial Team"
 image: "/images/blog/home-energy-audit.jpg"
-imageAlt: "Thermal imaging camera revealing heat loss in a home wall"
+imageAlt: "Homeowner using an infrared thermometer to check windows for air leaks during a DIY energy audit"
 faqs:
   - question: "How much does a professional home energy audit cost?"
     answer: "A professional home energy audit typically costs $200 to $500 and includes a blower door test (which pressurizes the house to find air leaks), thermal imaging, duct leakage testing, and a detailed report with prioritized recommendations. Many utility companies offer subsidized or free audits to their customers — check your utility provider's website before paying out of pocket."

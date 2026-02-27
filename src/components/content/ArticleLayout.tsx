@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -70,6 +71,19 @@ export function ArticleLayout({
               </p>
             )}
           </header>
+
+          {frontmatter.image && (
+            <div className="relative mb-8 aspect-video overflow-hidden rounded-xl">
+              <Image
+                src={frontmatter.image}
+                alt={frontmatter.imageAlt || frontmatter.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 800px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
 
           {/* Mobile TOC */}
           <div className="lg:hidden">

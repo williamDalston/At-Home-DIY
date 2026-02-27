@@ -91,6 +91,9 @@ export default async function BlogPostPage({ params }: Props) {
         title={post.frontmatter.title}
         description={post.frontmatter.description || ""}
         datePublished={post.frontmatter.date || ""}
+        dateModified={post.frontmatter.lastModified}
+        author={post.frontmatter.author}
+        image={post.frontmatter.image}
         slug={slug}
       />
     </>

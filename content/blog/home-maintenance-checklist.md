@@ -6,7 +6,7 @@ category: "general"
 keywords: ["home maintenance checklist", "seasonal home maintenance", "home upkeep", "house maintenance tips", "home care schedule"]
 author: "Editorial Team"
 image: "/images/blog/home-maintenance.jpg"
-imageAlt: "Homeowner inspecting HVAC filter during seasonal maintenance"
+imageAlt: "Seasonal home maintenance tasks including smoke detector testing, water heater inspection, gutter cleaning, and HVAC filter replacement"
 faqs:
   - question: "How often should I service my HVAC system?"
     answer: "Have your HVAC system professionally serviced twice a year — once in spring (for cooling) and once in fall (for heating). Replace air filters every 1-3 months depending on the filter type and whether you have pets."

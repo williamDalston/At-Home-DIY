@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getAllContent } from "@/lib/content";
+import { rateLimit, getClientId } from "@/lib/rate-limit";
 
 export interface SearchItem {
   title: string;
@@ -9,7 +10,16 @@ export interface SearchItem {
   category?: string;
 }
 
-export async function GET() {
+export async function GET(request: Request) {
+  const clientId = getClientId(request);
+  const rl = await rateLimit(`search:${clientId}`, { limit: 30, windowSeconds: 60 });
+  if (!rl.success) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   const [blogs, services] = await Promise.all([
     getAllContent("blog"),
     getAllContent("services"),

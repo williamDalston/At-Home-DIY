@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Blog & DIY Guides",
   description:
     "Expert home repair guides, DIY tips, and maintenance checklists. Learn how to tackle common household projects yourself.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 const POSTS_PER_PAGE = 6;

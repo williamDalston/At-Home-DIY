@@ -6,7 +6,7 @@ category: "plumbing"
 keywords: ["unclog drain", "clogged drain fix", "DIY drain cleaning", "plumbing tips", "how to unclog a drain"]
 author: "Editorial Team"
 image: "/images/blog/unclog-drain.jpg"
-imageAlt: "Plumber using a drain snake to clear a clogged kitchen sink"
+imageAlt: "Stainless steel kitchen sink drain with mesh strainer to prevent clogs"
 faqs:
   - question: "What is the easiest way to unclog a drain?"
     answer: "The easiest method is pouring boiling water down the drain, followed by a mixture of 1/2 cup baking soda and 1/2 cup white vinegar. Let it fizz for 30 minutes, then flush with more boiling water. This works well for minor clogs caused by soap and grease buildup."

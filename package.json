@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@types/hast": "^3.0.4",
     "@upstash/ratelimit": "^2.0.8",
     "@upstash/redis": "^1.36.2",
     "framer-motion": "^12.34.3",
@@ -26,6 +27,7 @@
     "remark-rehype": "^11.1.2",
     "resend": "^6.9.2",
     "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {

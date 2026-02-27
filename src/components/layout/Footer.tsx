@@ -66,7 +66,7 @@ export function Footer() {
           <NewsletterSignup variant="footer" />
         </div>
 
-        <div className="mt-10 border-t border-gray-700/50 pt-6 text-center text-sm text-gray-500">
+        <div className="mt-10 border-t border-gray-700/50 pt-6 text-center text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</p>
           <div className="mt-2 flex justify-center gap-4">
             <Link href="/privacy-policy" className="transition-colors hover:text-accent-400 focus-visible:outline-none focus-visible:text-accent-400 focus-visible:underline">

@@ -37,6 +37,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${svc.label} Guides & Tips`,
     description: `Expert ${svc.label.toLowerCase()} guides, DIY tips, and maintenance checklists for homeowners.`,
+    alternates: {
+      canonical: `/blog/category/${category}`,
+    },
   };
 }
 
