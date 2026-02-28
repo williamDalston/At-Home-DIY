@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { askExpertSchema } from "@/lib/validators";
+import { trackAskExpert } from "@/lib/analytics";
 
 interface FieldErrors {
   name?: string;
@@ -44,6 +45,7 @@ export function AskExpertForm() {
         setName("");
         setEmail("");
         setQuestion("");
+        trackAskExpert();
       } else {
         setStatus("error");
       }

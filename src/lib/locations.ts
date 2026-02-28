@@ -11,6 +11,12 @@ export interface Location {
   state: string;
   slug: string;
   population?: number;
+  climate?: string;
+  avgHomeAge?: string;
+  costIndex?: number;
+  permitNote?: string;
+  weatherChallenges?: string[];
+  topConcerns?: string[];
 }
 
 export function getAllLocations(): Location[] {

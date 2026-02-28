@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { PaintingData } from "@/lib/painting-calculator";
+import { trackToolUsage } from "@/lib/analytics";
 
 interface PaintingCalculatorProps {
   data: PaintingData;
@@ -37,6 +38,7 @@ export function PaintingCalculator({ data }: PaintingCalculatorProps) {
     const laborCost = includeLabor ? wallArea * data.laborRatePerSqFt : 0;
     const totalCost = paintCost + prepCost + primerCost + laborCost;
 
+    trackToolUsage("painting-cost-estimator");
     setResult({
       gallonsNeeded,
       paintCost: Math.round(paintCost),

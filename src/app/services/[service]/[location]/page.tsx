@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { FAQSection } from "@/components/content/FAQSection";
+import { InternalLinks } from "@/components/content/InternalLinks";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getContentBySlug } from "@/lib/content";
 import {
@@ -29,7 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const svc = await getContentBySlug("services", service);
     const title = `${svc.frontmatter.title} in ${loc.city}, ${loc.state}`;
-    const description = `Find trusted ${service} professionals in ${loc.city}, ${loc.state}. Licensed, insured, free estimates. Get local quotes today.`;
+    const climateNote = loc.climate ? ` Experts in ${loc.climate} climate challenges.` : "";
+    const description = `Find trusted ${service} professionals in ${loc.city}, ${loc.state}.${climateNote} Licensed, insured, free estimates. Get local quotes today.`;
 
     return {
       title,
@@ -43,7 +45,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       alternates: {
         canonical: `/services/${service}/${location}`,
       },
-      openGraph: { title, description },
+      openGraph: {
+        title,
+        description,
+        images: [
+          {
+            url: `/api/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(description)}&category=${encodeURIComponent(service)}`,
+            width: 1200,
+            height: 630,
+            alt: title,
+          },
+        ],
+      },
     };
   } catch {
     return {};
@@ -98,7 +111,47 @@ export default async function CityLandingPage({ params }: Props) {
             dangerouslySetInnerHTML={{ __html: override.htmlContent }}
           />
         ) : (
-          <div className="mt-8 space-y-6">
+          <div className="mt-8 space-y-8">
+            {/* City-specific context */}
+            {(loc.climate || loc.avgHomeAge) && (
+              <div className="rounded-lg border border-blue-100 bg-blue-50/50 p-5">
+                <h2 className="text-lg font-bold text-gray-900">
+                  {loc.city} at a Glance
+                </h2>
+                <dl className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-sm sm:grid-cols-4">
+                  {loc.climate && (
+                    <div>
+                      <dt className="font-medium text-gray-500">Climate</dt>
+                      <dd className="mt-0.5 capitalize text-gray-900">{loc.climate}</dd>
+                    </div>
+                  )}
+                  {loc.avgHomeAge && (
+                    <div>
+                      <dt className="font-medium text-gray-500">Avg. Home Age</dt>
+                      <dd className="mt-0.5 text-gray-900">{loc.avgHomeAge}</dd>
+                    </div>
+                  )}
+                  {loc.population && (
+                    <div>
+                      <dt className="font-medium text-gray-500">Population</dt>
+                      <dd className="mt-0.5 text-gray-900">{loc.population.toLocaleString()}</dd>
+                    </div>
+                  )}
+                  {loc.costIndex && (
+                    <div>
+                      <dt className="font-medium text-gray-500">Cost Index</dt>
+                      <dd className="mt-0.5 text-gray-900">
+                        {loc.costIndex > 1
+                          ? `${Math.round((loc.costIndex - 1) * 100)}% above`
+                          : `${Math.round((1 - loc.costIndex) * 100)}% below`}{" "}
+                        national avg.
+                      </dd>
+                    </div>
+                  )}
+                </dl>
+              </div>
+            )}
+
             <div>
               <h2 className="text-2xl font-bold text-gray-900">
                 Why Choose Local {svc.frontmatter.title} in {loc.city}
@@ -131,6 +184,54 @@ export default async function CityLandingPage({ params }: Props) {
               </ul>
             </div>
 
+            {/* Local challenges section — unique per city */}
+            {loc.weatherChallenges && loc.weatherChallenges.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  {svc.frontmatter.title} Challenges in {loc.city}
+                </h2>
+                <p className="mt-2 text-gray-600">
+                  {loc.city}&rsquo;s {loc.climate} climate creates specific home maintenance demands.
+                  Local {service} professionals understand these challenges firsthand:
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {loc.weatherChallenges.map((challenge) => (
+                    <li key={challenge} className="flex items-start gap-2">
+                      <span className="mt-1 text-amber-500">&#9888;</span>
+                      <span className="text-gray-700 capitalize">{challenge}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Top homeowner concerns — unique per city */}
+            {loc.topConcerns && loc.topConcerns.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  What {loc.city} Homeowners Ask About Most
+                </h2>
+                <ul className="mt-4 space-y-2">
+                  {loc.topConcerns.map((concern) => (
+                    <li key={concern} className="flex items-start gap-2">
+                      <span className="mt-1 text-blue-500">&#8226;</span>
+                      <span className="text-gray-700">{concern}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Permit info — unique per city */}
+            {loc.permitNote && (
+              <div className="rounded-lg border border-gray-200 bg-gray-50 p-5">
+                <h3 className="text-lg font-bold text-gray-900">
+                  Permits &amp; Regulations in {loc.city}
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">{loc.permitNote}</p>
+              </div>
+            )}
+
             <div>
               <h2 className="text-2xl font-bold text-gray-900">
                 Common {svc.frontmatter.title} Services in {loc.city}
@@ -144,6 +245,8 @@ export default async function CityLandingPage({ params }: Props) {
         )}
 
         {faqs.length > 0 && <FAQSection faqs={faqs} />}
+
+        <InternalLinks category={service} />
 
         <div className="mt-12 rounded-xl bg-blue-50 p-8 text-center">
           <h2 className="text-2xl font-bold text-gray-900">

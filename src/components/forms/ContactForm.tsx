@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { contactSchema, type ContactFormData } from "@/lib/validators";
 import { SERVICE_CATEGORIES } from "@/lib/constants";
+import { trackQuoteRequest } from "@/lib/analytics";
 
 interface ContactFormProps {
   defaultService?: string;
@@ -69,6 +70,7 @@ export function ContactForm({
 
       if (!res.ok) throw new Error("Failed to submit");
       setStatus("success");
+      trackQuoteRequest(formData.service, formData.city);
     } catch {
       setStatus("error");
     }

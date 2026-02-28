@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { newsletterSchema } from "@/lib/validators";
+import { trackNewsletterSignup } from "@/lib/analytics";
 
 interface NewsletterSignupProps {
   variant?: "inline" | "banner" | "footer";
@@ -36,6 +37,7 @@ export function NewsletterSignup({ variant = "inline" }: NewsletterSignupProps) 
         setStatus("success");
         setMessage("Thanks for subscribing! You'll receive our next newsletter.");
         setEmail("");
+        trackNewsletterSignup(variant);
       } else {
         setStatus("error");
         setMessage(data.error || "Something went wrong. Please try again.");

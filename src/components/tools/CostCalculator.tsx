@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { CalculatorData } from "@/lib/calculator";
+import { trackToolUsage } from "@/lib/analytics";
 
 interface CostCalculatorProps {
   data: CalculatorData;
@@ -41,6 +42,7 @@ export function CostCalculator({ data }: CostCalculatorProps) {
     const removal = removeOld ? area * data.removalCostPerSqFt : 0;
     const total = baseMaterials + labor + removal;
 
+    trackToolUsage("roofing-cost-estimator");
     setResult({
       lowEstimate: Math.round(total * 0.85),
       average: Math.round(total),

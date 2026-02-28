@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { HvacData } from "@/lib/hvac-calculator";
+import { trackToolUsage } from "@/lib/analytics";
 
 interface HvacCalculatorProps {
   data: HvacData;
@@ -34,6 +35,7 @@ export function HvacCalculator({ data }: HvacCalculatorProps) {
     const tonsRequired = Math.ceil((btuRequired / data.btuPerTon) * 2) / 2;
     const estimatedCost = Math.round(tonsRequired * system.costPerTon);
 
+    trackToolUsage("hvac-sizing-calculator");
     setResult({
       btuRequired,
       tonsRequired,

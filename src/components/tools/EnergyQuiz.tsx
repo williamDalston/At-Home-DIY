@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { EnergyQuizData } from "@/lib/energy-quiz";
+import { trackToolUsage } from "@/lib/analytics";
 
 interface EnergyQuizProps {
   data: EnergyQuizData;
@@ -30,6 +31,7 @@ export function EnergyQuiz({ data }: EnergyQuizProps) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       // Calculate result
+      trackToolUsage("energy-savings-quiz", "complete");
       const totalScore = Object.values(newAnswers).reduce((sum, s) => sum + s, 0);
       for (const rec of Object.values(data.recommendations)) {
         if (totalScore >= rec.range[0] && totalScore <= rec.range[1]) {

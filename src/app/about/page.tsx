@@ -85,6 +85,45 @@ export default function AboutPage() {
             and reviewed for accuracy. We only connect you with licensed and
             insured service providers who have been vetted for quality.
           </p>
+
+          <h2 id="editorial-standards" className="text-2xl font-bold text-gray-900">
+            Editorial Standards &amp; Methodology
+          </h2>
+          <p>
+            Transparency matters. Here is how we create and maintain the
+            information on this site:
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
+            <li>
+              <strong>Cost estimates</strong> are derived from national average
+              data published by industry sources (HomeAdvisor, Angi, U.S. Bureau
+              of Labor Statistics) and adjusted for regional cost-of-living
+              differences. They are intended as rough planning guides, not
+              binding quotes.
+            </li>
+            <li>
+              <strong>DIY guides</strong> are written and reviewed by our
+              editorial team, which includes licensed contractors and experienced
+              home improvement writers. Each guide is fact-checked before
+              publication.
+            </li>
+            <li>
+              <strong>Service recommendations</strong> connect you with licensed,
+              insured professionals. We verify licensing status and insurance
+              coverage. We do not accept payment for placement in our directory.
+            </li>
+            <li>
+              <strong>Updates:</strong> We review and update content on a
+              quarterly basis. Cost data is refreshed annually. Each article
+              displays its published and last-updated date.
+            </li>
+          </ul>
+          <p className="text-base text-gray-500">
+            Have a correction or concern? Contact us at{" "}
+            <a href="/contact" className="text-blue-600 hover:text-blue-700">
+              our contact page
+            </a>.
+          </p>
         </div>
 
         <div className="mt-12 rounded-xl bg-blue-50 p-8 text-center">

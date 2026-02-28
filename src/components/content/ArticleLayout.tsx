@@ -95,6 +95,18 @@ export function ArticleLayout({
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
 
+          {/* Editorial trust note */}
+          <div className="mt-8 rounded-lg border border-gray-200 bg-gray-50 px-5 py-4 text-sm text-gray-600">
+            <p>
+              <strong className="text-gray-700">Editorial note:</strong>{" "}
+              This guide was written and reviewed by our editorial team.
+              Cost estimates reflect national averages and may vary by region.{" "}
+              <a href="/about#editorial-standards" className="text-blue-600 hover:text-blue-700">
+                Read our editorial standards
+              </a>.
+            </p>
+          </div>
+
           <InArticleAd />
 
           {/* CTA with gradient border */}

@@ -37,6 +37,10 @@ export function SchemaArticle({
           "@type": "Organization",
           name: SITE_NAME,
           url: BASE_URL,
+          logo: {
+            "@type": "ImageObject",
+            url: `${BASE_URL}/logo.png`,
+          },
         },
         mainEntityOfPage: `${BASE_URL}/blog/${slug}`,
         ...(image && { image: `${BASE_URL}${image}` }),
