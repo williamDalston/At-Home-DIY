@@ -2,6 +2,7 @@
 title: "Emergency Plumbing: What to Do Before the Plumber Arrives"
 description: "Burst pipe, major leak, or sewage backup? Learn the critical first steps to minimize water damage and protect your home before professional help arrives."
 date: "2026-02-09"
+lastModified: "2026-02-09"
 category: "plumbing"
 keywords: ["emergency plumber", "burst pipe what to do", "plumbing emergency", "water leak emergency", "pipe burst in house", "emergency plumber near me"]
 author: "Editorial Team"

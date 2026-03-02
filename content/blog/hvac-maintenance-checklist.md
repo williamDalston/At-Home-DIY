@@ -2,6 +2,7 @@
 title: "HVAC Maintenance Checklist: Seasonal Guide for Homeowners"
 description: "Keep your heating and cooling system running efficiently with this seasonal HVAC maintenance checklist. Covers filter changes, coil cleaning, ductwork inspection, and more."
 date: "2026-02-07"
+lastModified: "2026-02-07"
 category: "hvac"
 keywords: ["HVAC maintenance checklist", "furnace maintenance", "AC maintenance tips", "HVAC tune-up", "seasonal HVAC care", "air conditioner maintenance"]
 author: "Editorial Team"

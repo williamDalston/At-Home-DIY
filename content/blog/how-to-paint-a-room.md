@@ -2,6 +2,7 @@
 title: "How to Paint a Room Like a Pro: Complete Step-by-Step Guide"
 description: "Learn how to paint a room from start to finish, including prep work, priming, cutting in edges, rolling walls, and cleanup. Get professional results on a DIY budget."
 date: "2026-02-10"
+lastModified: "2026-02-10"
 category: "painting"
 keywords: ["how to paint a room", "painting a room step by step", "DIY room painting", "interior painting tips", "paint a room like a pro"]
 author: "Editorial Team"

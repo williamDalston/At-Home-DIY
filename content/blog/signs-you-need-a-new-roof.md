@@ -2,6 +2,7 @@
 title: "8 Warning Signs You Need a New Roof"
 description: "Learn the key signs that your roof needs replacement, from curling shingles to rising energy bills. Know when it is time to repair versus replace your roof."
 date: "2026-02-05"
+lastModified: "2026-02-05"
 category: "roofing"
 keywords: ["signs you need a new roof", "roof replacement warning signs", "when to replace roof", "roof damage signs", "how long does a roof last"]
 author: "Editorial Team"

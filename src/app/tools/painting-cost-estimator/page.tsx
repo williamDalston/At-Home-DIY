@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { PaintingCalculator } from "@/components/tools/PaintingCalculator";
 import { InternalLinks } from "@/components/content/InternalLinks";
 import { AfterCalculatorAd } from "@/components/ads/AdSlots";
+import { SchemaWebApplication } from "@/components/seo/SchemaWebApplication";
 import { getPaintingData } from "@/lib/painting-calculator";
 
 export const metadata: Metadata = {
@@ -38,6 +39,13 @@ export default function PaintingCostEstimatorPage() {
   const data = getPaintingData();
 
   return (
+    <>
+    <SchemaWebApplication
+      name="Painting Cost Estimator"
+      description="Free painting cost calculator. Estimate interior or exterior painting costs based on wall area, paint type, and surface condition."
+      url="/tools/painting-cost-estimator"
+      category="Painting"
+    />
     <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
@@ -92,5 +100,6 @@ export default function PaintingCostEstimatorPage() {
         <InternalLinks category="painting" />
       </div>
     </Container>
+    </>
   );
 }

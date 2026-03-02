@@ -2,6 +2,7 @@
 title: "How to Patch and Repair Drywall Like a Pro"
 description: "Fix holes, dents, and cracks in drywall yourself. Step-by-step guide covering nail pops, small holes, medium holes, and large drywall repairs with a smooth finish."
 date: "2026-02-16"
+lastModified: "2026-02-16"
 category: "painting"
 keywords: ["drywall repair", "how to patch drywall", "fix hole in wall", "drywall patch kit", "repair drywall hole", "patch a wall hole"]
 author: "Editorial Team"

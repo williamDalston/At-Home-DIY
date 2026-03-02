@@ -2,6 +2,7 @@
 title: "How Much Does a New Roof Cost in 2026?"
 description: "A detailed breakdown of roof replacement costs in 2026 by material, size, and region. Learn what affects pricing and how to budget for a new roof."
 date: "2026-02-20"
+lastModified: "2026-02-20"
 category: "roofing"
 keywords: ["roof replacement cost", "how much does a new roof cost", "roof cost 2026", "new roof price", "asphalt shingle roof cost", "metal roof cost"]
 author: "Editorial Team"

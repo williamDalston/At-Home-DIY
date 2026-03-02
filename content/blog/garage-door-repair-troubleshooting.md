@@ -2,6 +2,7 @@
 title: "Garage Door Repair: Troubleshooting Common Problems"
 description: "Garage door won't open? Diagnose and fix common garage door problems including opener issues, broken springs, misaligned sensors, and noisy operation."
 date: "2026-02-13"
+lastModified: "2026-02-13"
 category: "electrical"
 keywords: ["garage door repair", "garage door won't open", "garage door opener not working", "garage door troubleshooting", "garage door spring replacement cost", "garage door sensor alignment"]
 author: "Editorial Team"

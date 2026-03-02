@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: post.frontmatter.description,
         type: "article",
         publishedTime: post.frontmatter.date,
+        modifiedTime: post.frontmatter.lastModified || post.frontmatter.date,
         images: [
           post.frontmatter.image || {
             url: `/api/og?title=${encodeURIComponent(post.frontmatter.title)}&subtitle=${encodeURIComponent(post.frontmatter.description || "")}&category=${encodeURIComponent(post.frontmatter.category || "")}`,

@@ -2,6 +2,7 @@
 title: "Window Replacement Cost: What to Expect in 2026"
 description: "How much does window replacement cost? Complete guide to window prices by type, frame material, and installation method with tips to save money."
 date: "2026-02-23"
+lastModified: "2026-02-23"
 category: "electrical"
 keywords: ["window replacement cost", "how much do new windows cost", "replacement window prices", "cost to replace windows", "new windows for home cost", "vinyl window cost"]
 author: "Editorial Team"

@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { CostCalculator } from "@/components/tools/CostCalculator";
 import { InternalLinks } from "@/components/content/InternalLinks";
 import { AfterCalculatorAd } from "@/components/ads/AdSlots";
+import { SchemaWebApplication } from "@/components/seo/SchemaWebApplication";
 import { getCalculatorData } from "@/lib/calculator";
 
 export const metadata: Metadata = {
@@ -38,6 +39,13 @@ export default function RoofingCostEstimatorPage() {
   const data = getCalculatorData();
 
   return (
+    <>
+    <SchemaWebApplication
+      name="Roofing Cost Estimator"
+      description="Free roofing cost calculator. Estimate the cost of your roofing project based on area, materials, pitch, and location."
+      url="/tools/roofing-cost-estimator"
+      category="Roofing"
+    />
     <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
@@ -89,5 +97,6 @@ export default function RoofingCostEstimatorPage() {
         <InternalLinks category="roofing" />
       </div>
     </Container>
+    </>
   );
 }

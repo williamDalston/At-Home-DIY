@@ -2,6 +2,7 @@
 title: "How to Caulk a Bathroom: Tub, Shower, and Sink Guide"
 description: "Replace old bathroom caulk like a pro. Step-by-step guide to removing old caulk and applying a smooth, waterproof bead around tubs, showers, and sinks."
 date: "2026-02-08"
+lastModified: "2026-02-08"
 category: "plumbing"
 keywords: ["how to caulk a bathtub", "recaulk shower", "bathroom caulk", "caulking a bathtub", "how to caulk around a tub", "remove old caulk"]
 author: "Editorial Team"

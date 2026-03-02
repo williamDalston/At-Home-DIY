@@ -48,7 +48,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...posts.map((post) => ({
       url: `${BASE_URL}/blog/${post.slug}`,
-      lastModified: post.frontmatter.date
+      lastModified: post.frontmatter.lastModified
+        ? new Date(post.frontmatter.lastModified)
+        : post.frontmatter.date
         ? new Date(post.frontmatter.date)
         : getFileMtime("blog", post.slug),
       changeFrequency: "monthly" as const,

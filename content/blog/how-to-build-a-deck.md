@@ -2,6 +2,7 @@
 title: "How to Build a Deck: Complete Planning Guide"
 description: "Plan your deck project with this complete guide covering design, materials, permits, footings, framing, and cost estimates for DIY deck building."
 date: "2026-02-24"
+lastModified: "2026-02-24"
 category: "landscaping"
 keywords: ["how to build a deck", "deck building guide", "DIY deck", "deck planning", "deck cost estimate", "deck materials comparison", "build a deck yourself"]
 author: "Editorial Team"

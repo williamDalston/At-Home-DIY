@@ -2,6 +2,7 @@
 title: "Landscaping on a Budget: 7 Affordable Ways to Transform Your Yard"
 description: "Upgrade your yard without breaking the bank. Budget-friendly landscaping tips including native plants, DIY edging, mulch, drip irrigation, and container gardening."
 date: "2026-02-14"
+lastModified: "2026-02-14"
 category: "landscaping"
 keywords: ["landscaping on a budget", "cheap landscaping ideas", "budget yard makeover", "affordable landscaping", "DIY landscaping tips", "low cost curb appeal"]
 author: "Editorial Team"

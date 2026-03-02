@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { HvacCalculator } from "@/components/tools/HvacCalculator";
 import { InternalLinks } from "@/components/content/InternalLinks";
 import { AfterCalculatorAd } from "@/components/ads/AdSlots";
+import { SchemaWebApplication } from "@/components/seo/SchemaWebApplication";
 import { getHvacData } from "@/lib/hvac-calculator";
 
 export const metadata: Metadata = {
@@ -39,6 +40,13 @@ export default function HvacSizingCalculatorPage() {
   const data = getHvacData();
 
   return (
+    <>
+    <SchemaWebApplication
+      name="HVAC Sizing Calculator"
+      description="Free HVAC sizing calculator. Determine the right BTU and tonnage for your home based on square footage, climate zone, and insulation level."
+      url="/tools/hvac-sizing-calculator"
+      category="HVAC"
+    />
     <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
@@ -93,5 +101,6 @@ export default function HvacSizingCalculatorPage() {
         <InternalLinks category="hvac" />
       </div>
     </Container>
+    </>
   );
 }

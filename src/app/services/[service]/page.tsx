@@ -10,6 +10,7 @@ import { InternalLinks } from "@/components/content/InternalLinks";
 import { SERVICE_SLUG_ICONS } from "@/lib/icons";
 import { getAllContent, getContentBySlug } from "@/lib/content";
 import { getAllLocations } from "@/lib/locations";
+import { getTestimonialsByService } from "@/lib/testimonials";
 
 interface Props {
   params: Promise<{ service: string }>;
@@ -63,6 +64,19 @@ export default async function ServiceCategoryPage({ params }: Props) {
 
   const locations = getAllLocations();
   const Icon = SERVICE_SLUG_ICONS[service];
+  const testimonials = getTestimonialsByService(service);
+  const aggregateRating =
+    testimonials.length > 0
+      ? {
+          ratingValue: parseFloat(
+            (
+              testimonials.reduce((sum, t) => sum + t.rating, 0) /
+              testimonials.length
+            ).toFixed(1)
+          ),
+          reviewCount: testimonials.length,
+        }
+      : undefined;
 
   return (
     <Container className="py-10 sm:py-12">
@@ -160,6 +174,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
       <SchemaService
         description={svc.frontmatter.description || ""}
         serviceType={service}
+        aggregateRating={aggregateRating}
       />
     </Container>
   );

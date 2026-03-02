@@ -2,6 +2,7 @@
 title: "How to Fix a Leaky Faucet Step by Step"
 description: "Stop that dripping faucet with this DIY repair guide. Covers compression, ball, cartridge, and ceramic disc faucet types."
 date: "2026-02-10"
+lastModified: "2026-02-10"
 category: "plumbing"
 keywords: ["fix leaky faucet", "dripping faucet repair", "faucet repair DIY", "how to fix a faucet", "kitchen faucet leak"]
 author: "Editorial Team"

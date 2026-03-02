@@ -5,12 +5,17 @@ interface SchemaServiceProps {
   serviceType: string;
   description: string;
   areaServed?: string;
+  aggregateRating?: {
+    ratingValue: number;
+    reviewCount: number;
+  };
 }
 
 export function SchemaService({
   serviceType,
   description,
   areaServed,
+  aggregateRating,
 }: SchemaServiceProps) {
   return (
     <JsonLd
@@ -31,6 +36,14 @@ export function SchemaService({
             areaServed: {
               "@type": "City",
               name: areaServed,
+            },
+          }),
+          ...(aggregateRating && {
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: aggregateRating.ratingValue,
+              reviewCount: aggregateRating.reviewCount,
+              bestRating: 5,
             },
           }),
         },

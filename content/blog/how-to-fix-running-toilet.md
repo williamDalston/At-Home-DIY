@@ -2,6 +2,7 @@
 title: "How to Fix a Running Toilet: 5 Easy DIY Fixes"
 description: "Stop a running toilet with these simple DIY fixes. Learn how to diagnose and repair a faulty flapper, fill valve, float, and overflow tube step by step."
 date: "2026-02-21"
+lastModified: "2026-02-21"
 category: "plumbing"
 keywords: ["fix running toilet", "toilet won't stop running", "running toilet repair", "toilet keeps running", "how to fix a toilet that runs", "toilet flapper replacement"]
 author: "Editorial Team"

@@ -2,6 +2,7 @@
 title: "DIY Home Energy Audit: Find Where Your Home Is Wasting Energy"
 description: "Perform a DIY home energy audit to identify insulation gaps, air leaks, and inefficient appliances. Save money on utility bills with this room-by-room guide."
 date: "2026-02-18"
+lastModified: "2026-02-18"
 category: "electrical"
 keywords: ["home energy audit", "DIY energy audit", "how to find air leaks", "reduce energy bills", "home energy efficiency", "thermal leak detector"]
 author: "Editorial Team"

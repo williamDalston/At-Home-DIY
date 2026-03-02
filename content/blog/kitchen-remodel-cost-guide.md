@@ -2,6 +2,7 @@
 title: "How Much Does a Kitchen Remodel Cost in 2026?"
 description: "Complete kitchen remodel cost breakdown by project scope. Learn average costs for countertops, cabinets, appliances, flooring, and labor with budgeting tips."
 date: "2026-02-27"
+lastModified: "2026-02-27"
 category: "painting"
 keywords: ["kitchen remodel cost", "kitchen renovation cost", "how much does a kitchen remodel cost", "kitchen remodel budget", "kitchen countertop cost", "cabinet replacement cost"]
 author: "Editorial Team"

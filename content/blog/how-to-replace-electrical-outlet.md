@@ -2,6 +2,7 @@
 title: "How to Replace an Electrical Outlet Safely"
 description: "Learn how to replace a standard duplex electrical outlet step by step. Covers breaker safety, voltage testing, wiring, and when to call a licensed electrician."
 date: "2026-02-03"
+lastModified: "2026-02-03"
 category: "electrical"
 keywords: ["replace electrical outlet", "how to change an outlet", "DIY outlet replacement", "duplex outlet wiring", "electrical outlet installation"]
 author: "Editorial Team"

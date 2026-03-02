@@ -2,6 +2,7 @@
 title: "How to Install a Smart Thermostat: Step-by-Step Guide"
 description: "Install a smart thermostat yourself in under an hour. Covers compatibility, wiring, setup, and configuration for Nest, Ecobee, and Honeywell thermostats."
 date: "2026-02-11"
+lastModified: "2026-02-11"
 category: "hvac"
 keywords: ["install smart thermostat", "smart thermostat installation", "how to install Nest thermostat", "thermostat wiring", "smart thermostat setup", "replace thermostat DIY"]
 author: "Editorial Team"

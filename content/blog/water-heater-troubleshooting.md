@@ -2,6 +2,7 @@
 title: "Water Heater Troubleshooting: Fix Common Problems Yourself"
 description: "Diagnose and fix common water heater problems including no hot water, strange noises, leaks, and rusty water. Covers both tank and tankless units."
 date: "2026-02-22"
+lastModified: "2026-02-22"
 category: "plumbing"
 keywords: ["water heater troubleshooting", "water heater not working", "no hot water", "water heater leaking", "water heater noise", "hot water heater repair"]
 author: "Editorial Team"

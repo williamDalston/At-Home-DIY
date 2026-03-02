@@ -2,6 +2,7 @@
 title: "How to Unclog a Drain - DIY Tips"
 description: "Learn simple steps to unclog any drain at home. Step-by-step guide with tools list and when to call a professional plumber."
 date: "2026-02-20"
+lastModified: "2026-02-20"
 category: "plumbing"
 keywords: ["unclog drain", "clogged drain fix", "DIY drain cleaning", "plumbing tips", "how to unclog a drain"]
 author: "Editorial Team"

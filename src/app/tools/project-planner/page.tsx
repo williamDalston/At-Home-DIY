@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { ProjectPlanner } from "@/components/tools/ProjectPlanner";
 import { AfterCalculatorAd } from "@/components/ads/AdSlots";
+import { SchemaWebApplication } from "@/components/seo/SchemaWebApplication";
 import { getChecklistData } from "@/lib/project-checklist";
 
 export const metadata: Metadata = {
@@ -38,6 +39,13 @@ export default function ProjectPlannerPage() {
   const data = getChecklistData();
 
   return (
+    <>
+    <SchemaWebApplication
+      name="Project Planner & Checklists"
+      description="Free home improvement project planner with step-by-step checklists for kitchen remodels, bathroom renovations, roof replacement, painting, and deck building."
+      url="/tools/project-planner"
+      category="Home Improvement"
+    />
     <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
@@ -87,5 +95,6 @@ export default function ProjectPlannerPage() {
         <AfterCalculatorAd />
       </div>
     </Container>
+    </>
   );
 }

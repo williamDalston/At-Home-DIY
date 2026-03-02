@@ -2,6 +2,7 @@
 title: "AC Not Working? Troubleshooting Guide Before You Call a Pro"
 description: "Air conditioner not cooling? Walk through these DIY troubleshooting steps to diagnose and fix common AC problems before paying for a service call."
 date: "2026-02-25"
+lastModified: "2026-02-25"
 category: "hvac"
 keywords: ["AC not working", "air conditioner not cooling", "AC troubleshooting", "AC not blowing cold air", "central air not working", "AC unit not turning on"]
 author: "Editorial Team"

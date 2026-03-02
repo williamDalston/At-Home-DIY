@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { EnergyQuiz } from "@/components/tools/EnergyQuiz";
 import { InternalLinks } from "@/components/content/InternalLinks";
 import { AfterCalculatorAd } from "@/components/ads/AdSlots";
+import { SchemaWebApplication } from "@/components/seo/SchemaWebApplication";
 import { getEnergyQuizData } from "@/lib/energy-quiz";
 
 export const metadata: Metadata = {
@@ -39,6 +40,13 @@ export default function EnergySavingsQuizPage() {
   const data = getEnergyQuizData();
 
   return (
+    <>
+    <SchemaWebApplication
+      name="Home Energy Savings Quiz"
+      description="Take our free home energy quiz to find out how efficient your home is and discover ways to save on energy bills."
+      url="/tools/energy-savings-quiz"
+      category="Energy Efficiency"
+    />
     <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
@@ -91,5 +99,6 @@ export default function EnergySavingsQuizPage() {
         <InternalLinks category="hvac" />
       </div>
     </Container>
+    </>
   );
 }

@@ -2,6 +2,7 @@
 title: "Ultimate Home Maintenance Checklist for Every Season"
 description: "Keep your home in top shape year-round with this seasonal maintenance checklist. Covers HVAC, plumbing, roofing, electrical, and more."
 date: "2026-02-15"
+lastModified: "2026-02-15"
 category: "general"
 keywords: ["home maintenance checklist", "seasonal home maintenance", "home upkeep", "house maintenance tips", "home care schedule"]
 author: "Editorial Team"

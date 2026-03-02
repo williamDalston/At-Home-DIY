@@ -2,6 +2,7 @@
 title: "How to Install a Ceiling Fan Step by Step"
 description: "Learn how to install a ceiling fan yourself with this complete guide. Covers wiring, mounting, balancing, and when to call an electrician."
 date: "2026-02-17"
+lastModified: "2026-02-17"
 category: "electrical"
 keywords: ["how to install a ceiling fan", "ceiling fan installation", "DIY ceiling fan", "replace light fixture with ceiling fan", "ceiling fan wiring"]
 author: "Editorial Team"

@@ -2,6 +2,7 @@
 title: "DIY Bathroom Remodel on a Budget: A Practical Guide"
 description: "Transform your bathroom without overspending. Budget-friendly remodel tips covering vanities, tile, fixtures, lighting, and where to save vs splurge."
 date: "2026-02-19"
+lastModified: "2026-02-19"
 category: "plumbing"
 keywords: ["DIY bathroom remodel", "bathroom remodel on a budget", "cheap bathroom renovation", "budget bathroom makeover", "bathroom update ideas", "affordable bathroom fixtures"]
 author: "Editorial Team"

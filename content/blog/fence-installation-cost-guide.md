@@ -2,6 +2,7 @@
 title: "Fence Installation Cost: Complete Pricing Guide for 2026"
 description: "How much does a new fence cost? Detailed pricing for wood, vinyl, chain-link, aluminum, and composite fencing including materials, labor, and per-foot costs."
 date: "2026-02-06"
+lastModified: "2026-02-06"
 category: "landscaping"
 keywords: ["fence installation cost", "how much does a fence cost", "privacy fence cost", "wood fence cost per foot", "vinyl fence cost", "fence installation near me"]
 author: "Editorial Team"
