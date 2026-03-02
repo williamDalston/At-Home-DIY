@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
         ]}
       />
 
-      <article className="prose prose-lg mx-auto max-w-3xl prose-headings:text-gray-900">
+      <article className="prose prose-lg mx-auto max-w-3xl prose-headings:text-gray-900 prose-headings:scroll-mt-24 prose-a:text-blue-600 prose-a:underline prose-a:decoration-blue-200 prose-a:underline-offset-2 hover:prose-a:decoration-blue-400">
         <h1>Privacy Policy</h1>
         <p>
           <strong>Last updated:</strong> February 1, 2026
@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
         <h2>How We Use Your Information</h2>
         <ul>
           <li>To respond to your inquiries and provide requested services</li>
-          <li>To connect you with local service professionals</li>
+          <li>To provide home service guidance and information</li>
           <li>To send newsletter content you subscribed to</li>
           <li>To improve our website content and user experience</li>
           <li>To analyze site traffic and usage patterns</li>
@@ -84,10 +84,9 @@ export default function PrivacyPolicyPage() {
 
         <h2>Information Sharing</h2>
         <p>
-          We do not sell your personal information. We may share your contact
-          information with local service professionals when you request a quote
-          or consultation. We use third-party services (Google Analytics) that
-          process anonymized data as described above.
+          We do not sell your personal information. We use third-party
+          services (Google Analytics, Google AdSense) that process anonymized
+          data as described above.
         </p>
 
         <h2>Cookies</h2>

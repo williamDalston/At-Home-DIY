@@ -38,7 +38,7 @@ export default function PaintingCostEstimatorPage() {
   const data = getPaintingData();
 
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -51,10 +51,10 @@ export default function PaintingCostEstimatorPage() {
       />
 
       <div className="mx-auto max-w-3xl">
-        <h1 className="text-4xl font-bold text-gray-900">
+        <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
           Painting Cost Estimator
         </h1>
-        <p className="mt-3 text-lg text-gray-600">
+        <p className="mt-4 text-lg text-gray-600 leading-relaxed">
           Get an instant estimate for your painting project. Enter your room
           details below to see a cost breakdown including paint, prep, primer,
           and labor.

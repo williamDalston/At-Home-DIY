@@ -1,6 +1,6 @@
 ---
 title: "Plumbing Services in New York, NY"
-description: "Find licensed NYC plumbers for repairs, installations, and emergencies. Navigate New York City's unique plumbing requirements with trusted professionals."
+description: "NYC plumbing guide — repairs, installations, and emergencies. Navigate New York City's unique plumbing requirements, costs, and code considerations."
 serviceType: "plumbing"
 city: "New York"
 state: "NY"

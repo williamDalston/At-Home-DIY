@@ -69,7 +69,7 @@ const tools = [
 
 export default function ToolsIndexPage() {
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -77,14 +77,14 @@ export default function ToolsIndexPage() {
         ]}
       />
 
-      <h1 className="text-4xl font-bold text-gray-900">
+      <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
         Tools & Calculators
       </h1>
-      <p className="mt-3 text-lg text-gray-600">
+      <p className="mt-4 text-lg text-gray-600 max-w-2xl">
         Free tools to help you plan and budget your next home project.
       </p>
 
-      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {tools.map((tool) => {
           const Icon = TOOL_ICONS[tool.slug];
           return (

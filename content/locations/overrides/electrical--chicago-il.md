@@ -1,6 +1,6 @@
 ---
 title: "Electrical Services in Chicago, IL"
-description: "Find trusted electrical professionals in Chicago, IL. Licensed electricians who understand Chicago's strict electrical code and the unique wiring challenges of vintage homes."
+description: "Chicago electrical guide — costs, code requirements, and tips for navigating Chicago's strict electrical code and the unique wiring challenges of vintage homes."
 ---
 
 ## Electrical Services Built for Chicago Homes
@@ -70,6 +70,6 @@ Many Chicago homes still have 60-amp or 100-amp electrical service, which was ad
 4. **Combine projects** -- Because pulling permits and running conduit is labor-intensive, it is often more cost-effective to combine multiple electrical upgrades into a single project rather than doing them piecemeal.
 5. **Plan for winter** -- Schedule non-emergency electrical work for spring or fall. Winter conditions can complicate exterior work and extend project timelines.
 
-## Find a Chicago Electrical Professional
+## Hiring an Electrician in Chicago
 
-Get free quotes from licensed, insured electrical contractors in the Chicago metro area. Our network includes professionals experienced with Chicago's unique electrical code, vintage home rewiring, and panel upgrades for modern energy demands.
+When choosing an electrician in Chicago, look for professionals experienced with Chicago's unique electrical code, vintage home rewiring, and panel upgrades for modern energy demands.

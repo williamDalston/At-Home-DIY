@@ -151,7 +151,7 @@ Some issues are beyond safe DIY scope. Call a licensed HVAC technician for:
 - **Repeated breaker trips.** This signals a short circuit, grounded compressor, or failing motor.
 - **Repeated freeze-ups.** After ruling out the filter and airflow, the cause is likely low refrigerant or a metering device malfunction.
 
-A diagnostic service call costs $75 to $150, and most technicians apply that fee toward repairs. [Get a free quote from licensed HVAC professionals in your area](/contact) to compare pricing.
+A diagnostic service call costs $75 to $150, and most technicians apply that fee toward repairs. Have questions about your AC issue? [Contact us](/contact) and we will help point you in the right direction.
 
 ## Seasonal Maintenance to Prevent AC Problems
 

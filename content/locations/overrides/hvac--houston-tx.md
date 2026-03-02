@@ -1,6 +1,6 @@
 ---
 title: "HVAC Services in Houston, TX"
-description: "Find trusted HVAC professionals in Houston, TX. Expert air conditioning, heating, and ventilation services for Houston's hot and humid climate."
+description: "Houston HVAC guide — air conditioning, heating, and ventilation for Houston's hot and humid climate. Costs, tips, and what to know before hiring."
 ---
 
 ## HVAC Services Tailored for Houston's Climate
@@ -37,6 +37,6 @@ An oversized system in Houston is a common and costly mistake. Oversized units c
 | Heat pump installation | $5,000 – $14,000 |
 | Duct sealing | $300 – $1,000 |
 
-## Find a Houston HVAC Professional
+## Hiring an HVAC Contractor in Houston
 
-Get free quotes from licensed, insured HVAC contractors in the Houston metro area. Our network includes professionals experienced with Houston's unique climate challenges.
+When choosing an HVAC contractor in Houston, look for professionals experienced with the area's unique climate challenges — high humidity, extreme summer heat, and the demands these place on cooling systems.

@@ -1,15 +1,15 @@
 ---
 title: "HVAC Services"
-description: "Find trusted local HVAC contractors for heating, cooling, and ventilation repairs, installations, and maintenance. Get free quotes."
+description: "Complete guide to HVAC services — heating, cooling, and ventilation repairs, installations, and maintenance. Average costs and hiring tips."
 serviceType: "hvac"
 icon: "thermometer"
 keywords: ["HVAC services", "heating and cooling", "AC repair", "furnace installation", "HVAC contractor near me"]
 benefits:
-  - "Licensed and EPA-certified technicians"
-  - "24/7 emergency heating and cooling repair"
+  - "What NATE and EPA certifications mean"
+  - "When to call for emergency HVAC repair"
   - "Energy-efficient system recommendations"
-  - "Free in-home estimates for new installations"
-  - "Maintenance plans to extend system life"
+  - "How to get and compare HVAC estimates"
+  - "Maintenance tips to extend system life"
 faqs:
   - question: "How much does HVAC repair cost?"
     answer: "Minor HVAC repairs cost $150-$500, while major repairs like compressor or heat exchanger replacement range from $1,000-$3,500. A full system replacement costs $5,000-$15,000 depending on system type, size, and efficiency rating."
@@ -21,7 +21,7 @@ faqs:
 
 ## Overview
 
-Your HVAC system keeps your home comfortable year-round. From routine maintenance to emergency repairs and full system replacements, our directory connects you with licensed, certified HVAC professionals in your area.
+Your HVAC system keeps your home comfortable year-round. From routine maintenance to emergency repairs and full system replacements, this guide covers what you need to know about HVAC services, costs, and choosing a qualified contractor.
 
 ## Common HVAC Services
 

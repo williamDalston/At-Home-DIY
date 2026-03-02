@@ -1,6 +1,6 @@
 ---
 title: "Roofing Services in Los Angeles, CA"
-description: "Find trusted roofing professionals in Los Angeles, CA. Expert roof repair, replacement, and installation for LA's unique climate and building codes."
+description: "Los Angeles roofing guide — repair, replacement, and installation for LA's unique climate and building codes. Costs, materials, and hiring tips."
 ---
 
 ## Roofing Services Built for Los Angeles
@@ -56,6 +56,6 @@ Your roofing contractor should handle the permit process. Budget $200-$500 for p
 
 *Costs include materials and labor. Actual prices vary by neighborhood, roof complexity, and contractor.*
 
-## Find a Los Angeles Roofing Professional
+## Hiring a Roofing Contractor in Los Angeles
 
-Get free quotes from licensed, insured roofing contractors in the Los Angeles metro area. Our network includes professionals experienced with LA building codes, fire-rated materials, and flat-roof systems.
+When choosing a roofing contractor in LA, look for professionals experienced with local building codes, fire-rated materials, and flat-roof systems common throughout the metro area.

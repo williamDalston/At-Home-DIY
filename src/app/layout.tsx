@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BackToTopButton } from "@/components/engagement/BackToTopButton";
 import { CookieConsent } from "@/components/engagement/CookieConsent";
+import { ConsentScripts } from "@/components/engagement/ConsentScripts";
 import { SearchKeyboardShortcut } from "@/components/search/SearchKeyboardShortcut";
 import { SITE_NAME, SITE_DESCRIPTION, BASE_URL } from "@/lib/constants";
 import "./globals.css";
@@ -81,34 +81,8 @@ export default function RootLayout({
         <Footer />
         <BackToTopButton />
         <CookieConsent />
+        <ConsentScripts gaId={gaId} adsenseId={adsenseId} />
         <SearchKeyboardShortcut />
-
-        {adsenseId && (
-          <Script
-            id="google-adsense"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
-            strategy="afterInteractive"
-            crossOrigin="anonymous"
-          />
-        )}
-
-        {gaId && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gaId}');
-              `}
-            </Script>
-          </>
-        )}
-
       </body>
     </html>
   );

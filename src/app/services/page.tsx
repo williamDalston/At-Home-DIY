@@ -8,7 +8,7 @@ import { getAllContent } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Home Services",
   description:
-    "Find trusted local professionals for plumbing, electrical, roofing, HVAC, painting, and landscaping. Get free quotes from licensed contractors in your area.",
+    "Expert guides, cost information, and tips for plumbing, electrical, roofing, HVAC, painting, and landscaping projects.",
   keywords: [
     "home services",
     "local contractors",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Home Services | FixIt Finder",
     description:
-      "Find trusted local professionals for plumbing, electrical, roofing, HVAC, painting, and landscaping. Get free quotes from licensed contractors.",
+      "Expert guides, cost information, and tips for plumbing, electrical, roofing, HVAC, painting, and landscaping projects.",
     images: [
       {
         url: "/api/og?title=Home%20Services&subtitle=Find%20trusted%20local%20professionals&category=services",
@@ -40,7 +40,7 @@ export default async function ServicesIndexPage() {
   const services = await getAllContent("services");
 
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -48,12 +48,12 @@ export default async function ServicesIndexPage() {
         ]}
       />
 
-      <h1 className="text-4xl font-bold text-gray-900">Home Services</h1>
-      <p className="mt-3 text-lg text-gray-600">
-        Connect with licensed, insured home service professionals in your area.
+      <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">Home Services</h1>
+      <p className="mt-4 text-lg text-gray-600 max-w-2xl">
+        Guides, costs, and tips for your home improvement projects.
       </p>
 
-      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {services.map((svc) => {
           const Icon = svc.frontmatter.icon
             ? SERVICE_ICONS[svc.frontmatter.icon]

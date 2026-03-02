@@ -43,7 +43,7 @@ export default async function BlogIndexPage({
   const paginatedPosts = posts.slice(start, start + POSTS_PER_PAGE);
 
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -51,13 +51,13 @@ export default async function BlogIndexPage({
         ]}
       />
 
-      <h1 className="text-4xl font-bold text-gray-900">Blog & DIY Guides</h1>
-      <p className="mt-3 text-lg text-gray-600">
+      <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">Blog & DIY Guides</h1>
+      <p className="mt-4 text-lg text-gray-600 max-w-2xl">
         Expert tips, step-by-step guides, and maintenance checklists for homeowners.
       </p>
 
       {/* Category filters */}
-      <div className="mt-6 flex flex-wrap gap-2">
+      <div className="mt-8 flex flex-wrap gap-2">
         <span className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-medium text-blue-700">
           All
         </span>
@@ -78,10 +78,10 @@ export default async function BlogIndexPage({
         </p>
       ) : (
         <>
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {paginatedPosts.map((post) => (
               <Card key={post.slug} href={`/blog/${post.slug}`}>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
                   {post.frontmatter.category && (
                     <Badge
                       variant={
@@ -100,7 +100,7 @@ export default async function BlogIndexPage({
                     </span>
                   )}
                 </div>
-                <h2 className="mt-3 text-lg font-semibold text-gray-900">
+                <h2 className="mt-4 text-lg font-semibold text-gray-900 leading-snug">
                   {post.frontmatter.title}
                 </h2>
                 <p className="mt-2 line-clamp-2 text-sm text-gray-600">

@@ -5,7 +5,6 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { FAQSection } from "@/components/content/FAQSection";
-import { Testimonials } from "@/components/engagement/Testimonials";
 import { SchemaService } from "@/components/seo/SchemaService";
 import { InternalLinks } from "@/components/content/InternalLinks";
 import { SERVICE_SLUG_ICONS } from "@/lib/icons";
@@ -66,7 +65,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
   const Icon = SERVICE_SLUG_ICONS[service];
 
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -83,10 +82,10 @@ export default async function ServiceCategoryPage({ params }: Props) {
             </div>
           )}
           <div>
-            <h1 className="text-4xl font-bold text-gray-900">
+            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
               {svc.frontmatter.title}
             </h1>
-            <p className="mt-1 text-lg text-gray-600">
+            <p className="mt-2 text-lg text-gray-600 leading-relaxed">
               {svc.frontmatter.description}
             </p>
           </div>
@@ -117,7 +116,7 @@ export default async function ServiceCategoryPage({ params }: Props) {
             <h2 className="text-2xl font-bold text-gray-900">
               Available Locations
             </h2>
-            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
               {locations.map((loc) => (
                 <Card
                   key={loc.slug}
@@ -135,15 +134,6 @@ export default async function ServiceCategoryPage({ params }: Props) {
           </section>
         )}
 
-        <section className="mt-12">
-          <h2 className="text-2xl font-bold text-gray-900">
-            What Our Customers Say
-          </h2>
-          <div className="mt-6">
-            <Testimonials service={service} limit={3} />
-          </div>
-        </section>
-
         {svc.frontmatter.faqs && svc.frontmatter.faqs.length > 0 && (
           <FAQSection faqs={svc.frontmatter.faqs} />
         )}
@@ -157,11 +147,11 @@ export default async function ServiceCategoryPage({ params }: Props) {
               Need {svc.frontmatter.title}?
             </h2>
             <p className="mt-2 text-gray-600">
-              Get free quotes from licensed professionals in your area.
+              Have questions about your project? We can help.
             </p>
             <div className="mt-4">
               <Button href={`/contact?service=${service}`} size="lg">
-                Get a Free Quote
+                Contact Us
               </Button>
             </div>
           </div>

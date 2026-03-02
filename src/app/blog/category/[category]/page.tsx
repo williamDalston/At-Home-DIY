@@ -78,7 +78,7 @@ export default async function BlogCategoryPage({ params }: Props) {
   const Icon = SERVICE_SLUG_ICONS[category];
 
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -94,10 +94,10 @@ export default async function BlogCategoryPage({ params }: Props) {
           </div>
         )}
         <div>
-          <h1 className="text-4xl font-bold text-gray-900">
+          <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
             {svc.label} Guides
           </h1>
-          <p className="mt-1 text-lg text-gray-600">
+          <p className="mt-2 text-lg text-gray-600 leading-relaxed">
             Expert {svc.label.toLowerCase()} tips and step-by-step tutorials.
           </p>
         </div>
@@ -133,14 +133,14 @@ export default async function BlogCategoryPage({ params }: Props) {
           </p>
           <Link
             href="/blog"
-            className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:underline"
+            className="mt-4 inline-flex items-center gap-1 rounded text-sm font-medium text-blue-600 transition-colors hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
           >
             <ArrowLeft className="h-4 w-4" />
             Browse all guides
           </Link>
         </div>
       ) : (
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {posts.map((post) => (
             <Card key={post.slug} href={`/blog/${post.slug}`}>
               <div className="flex items-center gap-2">

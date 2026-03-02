@@ -13,12 +13,12 @@ export function Footer() {
         className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 via-accent-400 to-blue-500"
       />
 
-      <Container className="py-12">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <Container className="py-14 sm:py-16">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div>
             <h3 className="text-lg font-bold text-white">{SITE_NAME}</h3>
-            <p className="mt-2 text-sm text-gray-400">
-              Expert DIY guides and trusted local home service professionals.
+            <p className="mt-3 text-sm text-gray-400 leading-relaxed">
+              Expert DIY guides and home service information.
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export function Footer() {
           <NewsletterSignup variant="footer" />
         </div>
 
-        <div className="mt-10 border-t border-gray-700/50 pt-6 text-center text-sm text-gray-400">
+        <div className="mt-12 border-t border-gray-700/50 pt-8 text-center text-sm text-gray-400">
           <p>&copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</p>
           <div className="mt-2 flex justify-center gap-4">
             <Link href="/privacy-policy" className="transition-colors hover:text-accent-400 focus-visible:outline-none focus-visible:text-accent-400 focus-visible:underline">

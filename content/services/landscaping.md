@@ -1,15 +1,15 @@
 ---
 title: "Landscaping Services"
-description: "Find experienced local landscapers for lawn care, garden design, hardscaping, and outdoor living spaces. Get free quotes."
+description: "Complete guide to landscaping services — lawn care, garden design, hardscaping, and outdoor living. Average costs and hiring tips."
 serviceType: "landscaping"
 icon: "tree"
 keywords: ["landscaping services", "landscaper near me", "lawn care", "garden design", "hardscaping", "outdoor living"]
 benefits:
-  - "Licensed and insured landscape professionals"
-  - "Free design consultations and estimates"
-  - "Seasonal maintenance plans available"
-  - "Expertise in native and drought-resistant plantings"
-  - "Hardscape and softscape design services"
+  - "What to look for in a licensed landscaper"
+  - "Tips for getting design consultations and estimates"
+  - "Seasonal maintenance planning advice"
+  - "Native and drought-resistant planting ideas"
+  - "Understanding hardscape and softscape options"
 faqs:
   - question: "How much does landscaping cost?"
     answer: "Basic landscaping projects cost $1,500-$5,000. Mid-range projects with plantings, mulch, and small hardscaping run $5,000-$15,000. Major landscape redesigns with patios, retaining walls, and irrigation can cost $15,000-$50,000+."
@@ -21,7 +21,7 @@ faqs:
 
 ## Overview
 
-Professional landscaping enhances your home's curb appeal, increases property value, and creates outdoor living spaces your family can enjoy. From basic lawn maintenance to complete landscape design, our directory connects you with experienced local professionals.
+Professional landscaping enhances your home's curb appeal, increases property value, and creates outdoor living spaces your family can enjoy. From basic lawn maintenance to complete landscape design, this guide covers services, costs, and how to choose the right landscaper.
 
 ## Common Landscaping Services
 

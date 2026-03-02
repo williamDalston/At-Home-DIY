@@ -190,6 +190,6 @@ Full-frame replacement exposes the wall cavity and weather barrier, requires pro
 
 Start by walking through your home and noting which windows have visible damage, seal failures, drafts, or operational problems. Prioritize those for immediate replacement. For most homeowners, vinyl double-hung windows with Energy Star certification hit the sweet spot of affordability, energy efficiency, and low maintenance.
 
-Get multiple written quotes, and make sure each bid includes trim, caulking, disposal of old windows, and cleanup. If you want to estimate how much energy you could save with new windows before committing, try our [energy savings quiz](/tools/energy-savings-quiz) for a personalized estimate. When you are ready to move forward, visit our [contact page](/contact) to connect with vetted window installers in your area.
+Get multiple written quotes, and make sure each bid includes trim, caulking, disposal of old windows, and cleanup. If you want to estimate how much energy you could save with new windows before committing, try our [energy savings quiz](/tools/energy-savings-quiz) for a personalized estimate. Have questions about your project? Visit our [contact page](/contact) and we will help point you in the right direction.
 
 New windows are one of the few home improvements that deliver daily comfort benefits, measurable energy savings, and meaningful curb appeal -- all at once. Plan your budget, choose the right contractor, and the investment will pay dividends for decades.

@@ -1,15 +1,15 @@
 ---
 title: "Painting Services"
-description: "Find professional painters for interior and exterior painting projects. Get free quotes from experienced, insured local painters."
+description: "Complete guide to painting services — interior and exterior projects. Average costs, surface prep tips, and what to look for when hiring a painter."
 serviceType: "painting"
 icon: "paintbrush"
 keywords: ["painting services", "house painter near me", "interior painting", "exterior painting", "painting contractor"]
 benefits:
-  - "Licensed and insured professional painters"
-  - "Free color consultations and estimates"
-  - "Premium paints and materials used"
-  - "Furniture protection and thorough cleanup"
-  - "Satisfaction guaranteed on all work"
+  - "What to look for in an insured painting contractor"
+  - "Tips for color selection and paint quality"
+  - "Understanding surface prep and materials"
+  - "Average costs for interior and exterior painting"
+  - "Questions to ask before hiring a painter"
 faqs:
   - question: "How much does it cost to paint a room?"
     answer: "Painting a standard 12x12 room costs $300-$800 for interior painting, including labor and materials. Factors include wall height, surface condition, paint quality, number of coats, and whether trim and ceiling are included."

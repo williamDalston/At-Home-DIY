@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -21,7 +21,7 @@ export default function TermsPage() {
         ]}
       />
 
-      <article className="prose prose-lg mx-auto max-w-3xl prose-headings:text-gray-900">
+      <article className="prose prose-lg mx-auto max-w-3xl prose-headings:text-gray-900 prose-headings:scroll-mt-24 prose-a:text-blue-600 prose-a:underline prose-a:decoration-blue-200 prose-a:underline-offset-2 hover:prose-a:decoration-blue-400">
         <h1>Terms of Service</h1>
         <p>
           <strong>Last updated:</strong> February 1, 2026

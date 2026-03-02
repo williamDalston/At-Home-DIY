@@ -1,6 +1,6 @@
 ---
 title: "Landscaping Services in San Antonio, TX"
-description: "Find trusted landscaping professionals in San Antonio, TX. Expert xeriscaping, native plant design, and water-wise landscapes built for South Texas heat and drought."
+description: "San Antonio landscaping guide — xeriscaping, native plant design, and water-wise landscapes for South Texas heat and drought. Costs and hiring tips."
 ---
 
 ## Landscaping Services Built for San Antonio's Climate
@@ -67,6 +67,6 @@ Many San Antonio neighborhoods, particularly in the rapidly developing north and
 4. **Water deeply but infrequently** -- Train plants to develop deep root systems by watering slowly and deeply rather than frequently and shallowly. This also complies with SAWS watering schedules.
 5. **Know your soil** -- Get a soil test through the Texas A&M AgriLife Extension before making major planting investments. San Antonio soils vary enormously across the city, and a $20 soil test can save hundreds in failed plantings.
 
-## Find a San Antonio Landscaping Professional
+## Hiring a Landscaper in San Antonio
 
-Get free quotes from licensed, insured landscaping contractors in the San Antonio metro area. Our network includes professionals experienced with xeriscaping, native Texas plant design, SAWS rebate programs, and irrigation systems built for South Texas drought conditions.
+When choosing a landscaping contractor in San Antonio, look for professionals experienced with xeriscaping, native Texas plant design, SAWS rebate programs, and irrigation systems built for South Texas drought conditions.

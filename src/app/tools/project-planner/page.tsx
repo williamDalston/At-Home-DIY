@@ -38,7 +38,7 @@ export default function ProjectPlannerPage() {
   const data = getChecklistData();
 
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -51,10 +51,10 @@ export default function ProjectPlannerPage() {
       />
 
       <div className="mx-auto max-w-3xl">
-        <h1 className="text-4xl font-bold text-gray-900">
+        <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
           Project Planner & Checklists
         </h1>
-        <p className="mt-3 text-lg text-gray-600">
+        <p className="mt-4 text-lg text-gray-600 leading-relaxed">
           Stay organized with our step-by-step project checklists. Select your
           project type and track your progress from planning through completion.
         </p>
@@ -79,8 +79,8 @@ export default function ProjectPlannerPage() {
             you go to track your progress visually.
           </p>
           <p>
-            Need help with any step? Use our contractor finder to connect with
-            licensed professionals in your area who can handle the heavy lifting.
+            Need help with any step? Check out our service guides to learn
+            what to look for when hiring a professional for the heavy lifting.
           </p>
         </div>
 

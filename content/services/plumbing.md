@@ -1,15 +1,15 @@
 ---
 title: "Plumbing Services"
-description: "Find trusted local plumbers for repairs, installations, and inspections. Get free quotes from licensed professionals."
+description: "Complete guide to residential plumbing services — repairs, installations, and inspections. Average costs, tips, and what to look for when hiring."
 serviceType: "plumbing"
 icon: "wrench"
 keywords: ["plumber near me", "plumbing services", "local plumber", "plumbing repair", "emergency plumber"]
 benefits:
-  - "Licensed and insured professionals"
-  - "Same-day service available for emergencies"
-  - "Free estimates with no obligation"
-  - "24/7 emergency plumbing support"
-  - "Satisfaction guaranteed on all work"
+  - "Learn what to look for in licensed, insured plumbers"
+  - "Average costs for common plumbing repairs"
+  - "Tips for getting and comparing estimates"
+  - "Emergency plumbing guidance"
+  - "Questions to ask before hiring"
 faqs:
   - question: "How much does a plumber cost?"
     answer: "Plumbers typically charge $50-$150 per hour depending on complexity and location. A service call fee of $75-$150 is common. Simple repairs like fixing a leaky faucet cost $125-$275, while larger projects like water heater replacement range from $1,200-$3,500."
@@ -21,7 +21,7 @@ faqs:
 
 ## Overview
 
-Whether you need a quick faucet repair or a complete re-pipe, finding a qualified local plumber is essential. Our directory connects you with licensed, insured plumbing professionals who handle everything from routine maintenance to emergency repairs.
+Whether you need a quick faucet repair or a complete re-pipe, finding a qualified local plumber is essential. This guide covers common plumbing services, average costs, and what to look for when hiring a professional.
 
 ## Common Plumbing Services
 

@@ -113,7 +113,7 @@ With the crisis contained, call a licensed emergency plumber. Have this informat
 - **What you have done** -- water shut off, breaker off, etc.
 - **Access** -- can the plumber reach the area easily, or will walls need to be opened?
 
-If you need help finding a qualified emergency plumber, [contact us](/contact) for a referral to licensed professionals in your area.
+If you have questions about handling a plumbing emergency, [contact us](/contact) and we will do our best to help.
 
 ## Common Plumbing Emergencies and What to Do
 
@@ -203,4 +203,4 @@ Costs vary by region, time of day, and complexity. Prompt action almost always c
 
 You now have a clear plan: shut off the water, protect against electrical hazards, contain the damage, document everything, and call a professional. Those first critical minutes can save your home from thousands of dollars in damage.
 
-If you need professional help now, [contact us](/contact) to connect with licensed emergency plumbers in your area.
+Have questions about your plumbing situation? [Contact us](/contact) and we will help point you in the right direction.

@@ -33,7 +33,7 @@ export function ArticleLayout({
   const { minutes } = estimateReadingTime(content);
 
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs items={breadcrumbs} />
 
       <div className="lg:grid lg:grid-cols-[1fr_220px] lg:gap-10">
@@ -54,7 +54,7 @@ export function ArticleLayout({
               )}
               <ReadingTime minutes={minutes} />
             </div>
-            <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-900">
+            <h1 className="mt-3 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               {frontmatter.title}
             </h1>
             {frontmatter.author && (
@@ -73,7 +73,7 @@ export function ArticleLayout({
           </header>
 
           {frontmatter.image && (
-            <div className="relative mb-8 aspect-video overflow-hidden rounded-xl">
+            <div className="relative mb-8 aspect-video overflow-hidden rounded-xl shadow-md">
               <Image
                 src={frontmatter.image}
                 alt={frontmatter.imageAlt || frontmatter.title}
@@ -91,7 +91,7 @@ export function ArticleLayout({
           </div>
 
           <div
-            className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-a:text-blue-600 prose-img:rounded-lg"
+            className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-headings:scroll-mt-24 prose-a:text-blue-600 prose-a:underline prose-a:decoration-blue-200 prose-a:underline-offset-2 prose-a:transition-colors hover:prose-a:decoration-blue-400 prose-img:rounded-lg"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
 
@@ -101,7 +101,7 @@ export function ArticleLayout({
               <strong className="text-gray-700">Editorial note:</strong>{" "}
               This guide was written and reviewed by our editorial team.
               Cost estimates reflect national averages and may vary by region.{" "}
-              <a href="/about#editorial-standards" className="text-blue-600 hover:text-blue-700">
+              <a href="/about#editorial-standards" className="text-blue-600 underline decoration-blue-200 underline-offset-2 transition-colors hover:text-blue-700 hover:decoration-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded">
                 Read our editorial standards
               </a>.
             </p>
@@ -116,10 +116,10 @@ export function ArticleLayout({
                 Need Professional Help?
               </h3>
               <p className="mt-2 text-gray-600">
-                Get free quotes from licensed professionals in your area.
+                Have questions about your project? We can help.
               </p>
               <div className="mt-4">
-                <Button href="/contact">Get a Free Quote</Button>
+                <Button href="/contact">Contact Us</Button>
               </div>
             </div>
           </div>

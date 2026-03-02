@@ -8,15 +8,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-gray-200/80 bg-white/80 backdrop-blur-md">
       <Container>
-        <div className="relative flex h-16 items-center justify-between">
+        <div className="relative flex h-16 sm:h-[4.25rem] items-center justify-between">
           <Link
             href="/"
-            className="text-xl font-bold bg-gradient-to-r from-blue-600 to-accent-500 bg-clip-text text-transparent"
+            className="text-xl font-bold bg-gradient-to-r from-blue-600 to-accent-500 bg-clip-text text-transparent sm:text-2xl"
           >
             {SITE_NAME}
           </Link>
 
-          <nav aria-label="Main navigation" className="hidden items-center gap-8 lg:flex">
+          <nav aria-label="Main navigation" className="hidden items-center gap-8 lg:flex lg:gap-10">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -37,7 +37,7 @@ export function Header() {
               href="/contact"
               className="rounded-lg bg-gradient-to-r from-accent-500 to-accent-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-accent-500/20 transition-all hover:from-accent-600 hover:to-accent-700 hover:shadow-lg hover:shadow-accent-500/30"
             >
-              Get a Free Quote
+              Contact Us
             </Link>
           </nav>
 

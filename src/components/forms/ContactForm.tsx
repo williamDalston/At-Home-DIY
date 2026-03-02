@@ -15,7 +15,7 @@ interface ContactFormProps {
 export function ContactForm({
   defaultService = "",
   defaultCity = "",
-  heading = "Request a Free Quote",
+  heading = "Send Us a Message",
   className = "",
 }: ContactFormProps) {
   const [formData, setFormData] = useState<ContactFormData>({

@@ -1,15 +1,15 @@
 ---
 title: "Electrical Services"
-description: "Find licensed local electricians for repairs, installations, and safety inspections. Get free quotes from trusted professionals."
+description: "Complete guide to residential electrical services — repairs, installations, and safety inspections. Average costs, tips, and what to look for when hiring."
 serviceType: "electrical"
 icon: "zap"
 keywords: ["electrician near me", "electrical services", "local electrician", "electrical repair", "wiring installation"]
 benefits:
-  - "Licensed and insured master electricians"
-  - "Code-compliant installations and repairs"
-  - "Free safety inspections with service"
-  - "Same-day availability for urgent issues"
-  - "Upfront pricing with no hidden fees"
+  - "Learn what to look for in licensed electricians"
+  - "Understand code-compliant installations and repairs"
+  - "Average costs for common electrical work"
+  - "Safety warning signs to watch for"
+  - "Tips for getting upfront pricing"
 faqs:
   - question: "How much does an electrician cost?"
     answer: "Electricians typically charge $50-$130 per hour, with a service call fee of $75-$150. Common jobs: outlet replacement $100-$200, ceiling fan installation $150-$350, panel upgrade $1,500-$4,000, whole-house rewire $8,000-$20,000."
@@ -21,7 +21,7 @@ faqs:
 
 ## Overview
 
-Safe, reliable electrical systems are critical for every home. From simple outlet repairs to complete rewiring, our directory connects you with licensed electricians who ensure your home meets current electrical codes and safety standards.
+Safe, reliable electrical systems are critical for every home. From simple outlet repairs to complete rewiring, this guide covers what you need to know about hiring a licensed electrician who meets current electrical codes and safety standards.
 
 ## Common Electrical Services
 

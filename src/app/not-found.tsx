@@ -6,9 +6,9 @@ import { Search, Home, BookOpen, Wrench } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <Container className="py-16 text-center">
+    <Container className="py-20 sm:py-24 text-center">
       {/* Decorative gradient number */}
-      <div className="relative mx-auto mb-6 w-fit">
+      <div className="relative mx-auto mb-8 w-fit">
         <span
           aria-hidden="true"
           className="text-[10rem] font-black leading-none tracking-tighter bg-gradient-to-br from-blue-600 via-accent-400 to-blue-600 bg-clip-text text-transparent select-none"
@@ -24,13 +24,13 @@ export default function NotFound() {
       <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
         Page Not Found
       </h1>
-      <p className="mx-auto mt-3 max-w-md text-gray-600">
+      <p className="mx-auto mt-4 max-w-md text-lg text-gray-600">
         The page you&apos;re looking for doesn&apos;t exist or has been moved.
         Try one of the links below to get back on track.
       </p>
 
       {/* Primary actions */}
-      <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+      <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-5">
         <Button href="/">
           <Home className="mr-2 h-4 w-4" />
           Go Home
@@ -46,11 +46,11 @@ export default function NotFound() {
       </div>
 
       {/* Quick service links */}
-      <div className="mx-auto mt-14 max-w-2xl">
+      <div className="mx-auto mt-16 max-w-2xl">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
           Popular Services
         </h2>
-        <div className="mt-4 flex flex-wrap justify-center gap-3">
+        <div className="mt-5 flex flex-wrap justify-center gap-3">
           {SERVICE_CATEGORIES.map((svc) => (
             <Link
               key={svc.slug}

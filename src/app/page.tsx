@@ -8,8 +8,6 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 import { FadeInOnScroll } from "@/components/motion/FadeInOnScroll";
 import { StaggeredCards, StaggeredItem } from "@/components/motion/StaggeredCards";
 import { SocialProofCounters } from "@/components/engagement/SocialProofCounters";
-import { Testimonials } from "@/components/engagement/Testimonials";
-import { HomepageAd } from "@/components/ads/AdSlots";
 import { SchemaWebSite } from "@/components/seo/SchemaWebSite";
 import { SERVICE_CATEGORIES } from "@/lib/constants";
 import { SERVICE_ICONS, TOOL_ICONS } from "@/lib/icons";
@@ -18,7 +16,7 @@ import { getAllContent } from "@/lib/content";
 export const metadata: Metadata = {
   title: "FixIt Finder - Expert Home Repair Guides & Local Service Pros",
   description:
-    "Expert DIY guides, cost calculators, and trusted local contractors for plumbing, electrical, roofing, HVAC, painting, and landscaping. Get free quotes today.",
+    "Expert DIY guides, cost calculators, and home service information for plumbing, electrical, roofing, HVAC, painting, and landscaping.",
   keywords: [
     "home repair guides",
     "DIY home improvement",
@@ -36,16 +34,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FixIt Finder - Expert Home Repair Guides & Local Service Pros",
     description:
-      "Expert DIY guides, cost calculators, and trusted local contractors. Get free quotes for plumbing, electrical, roofing, and more.",
+      "Expert DIY guides, cost calculators, and home service information for plumbing, electrical, roofing, and more.",
     type: "website",
   },
 };
 
 const trustBadges = [
-  { label: "Free Quotes", Icon: DollarSign },
+  { label: "Free Guides", Icon: DollarSign },
   { label: "No Obligation", Icon: Shield },
-  { label: "Licensed Pros", Icon: BadgeCheck },
-  { label: "Fast Response", Icon: Clock },
+  { label: "Expert Tips", Icon: BadgeCheck },
+  { label: "Updated Regularly", Icon: Clock },
 ];
 
 const tools = [
@@ -88,7 +86,7 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 py-20 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 py-24 text-white sm:py-28 lg:py-32">
         {/* Decorative floating elements */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
           <div className="absolute left-[10%] top-[15%] h-64 w-64 rounded-full bg-blue-500/20 blur-3xl motion-safe:animate-float" />
@@ -101,13 +99,13 @@ export default async function HomePage() {
             <h1 className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl lg:text-6xl">
               Expert Home Repair Guides & Local Service Pros
             </h1>
-            <p className="mt-6 text-lg text-blue-100">
-              DIY tips, cost calculators, and trusted local contractors —
+            <p className="mt-6 text-lg text-blue-100 sm:text-xl">
+              DIY tips, cost calculators, and home service guides —
               everything you need to keep your home in top shape.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-5">
               <Button href="/contact" size="lg" variant="secondary">
-                Get a Free Quote
+                Contact Us
               </Button>
               <Button
                 href="/blog"
@@ -120,7 +118,7 @@ export default async function HomePage() {
             </div>
 
             {/* Social Proof Counters */}
-            <div className="mt-14">
+            <div className="mt-16 sm:mt-20">
               <SocialProofCounters />
             </div>
           </div>
@@ -128,12 +126,12 @@ export default async function HomePage() {
       </section>
 
       {/* Trust Badges */}
-      <section className="border-b border-gray-100 bg-white py-6">
+      <section className="border-b border-gray-100 bg-white py-8 sm:py-10">
         <Container>
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 sm:gap-x-14">
             {trustBadges.map(({ label, Icon }) => (
-              <div key={label} className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <Icon className="h-5 w-5 text-accent-500" />
+              <div key={label} className="flex items-center gap-2.5 text-sm font-medium text-gray-700 sm:text-base">
+                <Icon className="h-5 w-5 shrink-0 text-accent-500" />
                 <span>{label}</span>
               </div>
             ))}
@@ -142,18 +140,18 @@ export default async function HomePage() {
       </section>
 
       {/* Service Categories */}
-      <section className="py-16">
+      <section className="py-20 sm:py-24">
         <Container>
           <FadeInOnScroll>
-            <h2 className="text-center text-3xl font-bold text-gray-900">
+            <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
               Find Local Professionals
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-gray-600">
-              Connect with licensed, insured service providers in your area
-              across 10 major cities.
+            <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-gray-600">
+              Browse home service guides and cost information across
+              10 major cities.
             </p>
           </FadeInOnScroll>
-          <StaggeredCards className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <StaggeredCards className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {SERVICE_CATEGORIES.map((svc) => {
               const Icon = SERVICE_ICONS[svc.icon];
               return (
@@ -166,8 +164,8 @@ export default async function HomePage() {
                       {svc.label}
                     </h3>
                     <p className="mt-2 text-sm text-gray-600">
-                      Find trusted {svc.label.toLowerCase()} professionals near
-                      you.
+                      DIY guides, costs, and tips for{" "}
+                      {svc.label.toLowerCase()} projects.
                     </p>
                   </Card>
                 </StaggeredItem>
@@ -181,22 +179,22 @@ export default async function HomePage() {
 
       {/* Recent Blog Posts */}
       {recentPosts.length > 0 && (
-        <section className="bg-gray-50 py-16">
+        <section className="bg-gray-50 py-20 sm:py-24">
           <Container>
             <FadeInOnScroll>
-              <div className="flex items-center justify-between">
-                <h2 className="text-3xl font-bold text-gray-900">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
                   Latest DIY Guides
                 </h2>
                 <Link
                   href="/blog"
-                  className="text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700"
+                  className="text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 shrink-0"
                 >
                   View all &rarr;
                 </Link>
               </div>
             </FadeInOnScroll>
-            <StaggeredCards className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <StaggeredCards className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
               {recentPosts.map((post) => (
                 <StaggeredItem key={post.slug}>
                   <Card href={`/blog/${post.slug}`}>
@@ -228,34 +226,29 @@ export default async function HomePage() {
 
       <SectionDivider variant="angle" color="#ffffff" flip />
 
-      {/* Ad between blog and tools sections */}
-      <Container>
-        <HomepageAd />
-      </Container>
-
       {/* Tools Showcase */}
-      <section className="py-16">
+      <section className="py-20 sm:py-24">
         <Container>
           <FadeInOnScroll>
-            <h2 className="text-center text-3xl font-bold text-gray-900">
+            <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
               Free Tools & Calculators
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-gray-600">
+            <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-gray-600">
               Plan your project, estimate costs, and make smarter decisions with
               our free tools.
             </p>
           </FadeInOnScroll>
-          <StaggeredCards className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <StaggeredCards className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {tools.map((tool) => {
               const Icon = TOOL_ICONS[tool.slug];
               return (
                 <StaggeredItem key={tool.href}>
                   <Card href={tool.href}>
-                    <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-accent-500/10 text-accent-600 transition-colors duration-300 group-hover:bg-accent-500 group-hover:text-white">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent-500/10 text-accent-600 transition-colors duration-300 group-hover:bg-accent-500 group-hover:text-white">
                       {Icon ? <Icon className="h-6 w-6" /> : null}
                     </div>
-                    <h3 className="font-semibold text-gray-900">{tool.title}</h3>
-                    <p className="mt-1 text-sm text-gray-600">{tool.desc}</p>
+                    <h3 className="text-lg font-semibold text-gray-900">{tool.title}</h3>
+                    <p className="mt-2 text-sm text-gray-600">{tool.desc}</p>
                   </Card>
                 </StaggeredItem>
               );
@@ -266,28 +259,8 @@ export default async function HomePage() {
 
       <SectionDivider variant="wave" color="#f9fafb" />
 
-      {/* Testimonials */}
-      <section className="bg-gray-50 py-16">
-        <Container>
-          <FadeInOnScroll>
-            <h2 className="text-center text-3xl font-bold text-gray-900">
-              What Homeowners Are Saying
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-center text-gray-600">
-              Real feedback from homeowners who used FixIt Finder for their
-              projects.
-            </p>
-          </FadeInOnScroll>
-          <FadeInOnScroll delay={0.2}>
-            <div className="mt-10">
-              <Testimonials limit={6} />
-            </div>
-          </FadeInOnScroll>
-        </Container>
-      </section>
-
       {/* CTA */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 py-20 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 py-24 text-white sm:py-28">
         {/* Decorative accent orbs */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
           <div className="absolute -left-20 top-1/2 h-40 w-40 -translate-y-1/2 rounded-full bg-blue-500/10 blur-3xl" />
@@ -300,13 +273,13 @@ export default async function HomePage() {
               <h2 className="text-3xl font-bold sm:text-4xl">
                 Ready to Start Your Project?
               </h2>
-              <p className="mt-4 text-gray-300">
-                Get free quotes from licensed professionals in your area. No
-                obligation, no hassle.
+              <p className="mt-5 text-lg text-gray-300">
+                Explore our DIY guides, use our free cost calculators, or
+                reach out with questions about your next project.
               </p>
-              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-5">
                 <Button href="/contact" size="lg">
-                  Get a Free Quote
+                  Contact Us
                 </Button>
                 <Button
                   href="/tools"

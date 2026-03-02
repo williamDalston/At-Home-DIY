@@ -1,15 +1,15 @@
 ---
 title: "Roofing Services"
-description: "Find experienced local roofing contractors for repairs, replacements, and inspections. Get free quotes for all roofing materials."
+description: "Complete guide to roofing services — repairs, replacements, and inspections. Material comparisons, average costs, and tips for choosing a contractor."
 serviceType: "roofing"
 icon: "home"
 keywords: ["roofing services", "roof repair", "roof replacement", "roofing contractor near me", "roof inspection"]
 benefits:
-  - "Free roof inspections and detailed estimates"
-  - "Licensed, bonded, and insured contractors"
-  - "Manufacturer-certified installers for warranty coverage"
-  - "Storm damage assessment and insurance claim assistance"
-  - "Workmanship warranties of 5-25 years"
+  - "What to expect from a roof inspection"
+  - "How to verify licensing, bonding, and insurance"
+  - "Understanding manufacturer certifications and warranties"
+  - "Storm damage assessment tips"
+  - "Typical workmanship warranty terms"
 faqs:
   - question: "How much does a new roof cost?"
     answer: "A new roof for an average-sized home (1,700 sq ft) typically costs $8,000-$15,000 for asphalt shingles, $15,000-$30,000 for metal, and $20,000-$45,000 for tile. The final price depends on roof size, pitch, stories, material, and location."

@@ -1,6 +1,6 @@
 ---
 title: "Roofing Services in Dallas, TX"
-description: "Find trusted roofing professionals in Dallas, TX. Expert hail damage repair, storm-rated materials, and insurance claim guidance for North Texas homeowners."
+description: "Dallas roofing guide — hail damage repair, storm-rated materials, and insurance claim guidance for North Texas homeowners. Costs and hiring tips."
 ---
 
 ## Roofing Services Built for Dallas Storm Country
@@ -65,6 +65,6 @@ While storms drive most roof replacements in Dallas, the summer heat takes a cum
 4. **Do not accept a verbal agreement** -- Every aspect of a roofing project should be documented in a written contract including materials, warranties, timeline, and payment terms. Texas law requires a written contract for home improvement projects over $1,000.
 5. **Check for permits** -- The City of Dallas requires a building permit for roof replacement. Your contractor should pull this permit. An unpermitted roof can create problems when selling your home.
 
-## Find a Dallas Roofing Professional
+## Hiring a Roofer in Dallas
 
-Get free quotes from licensed, insured roofing contractors in the Dallas-Fort Worth metro area. Our network includes professionals experienced with hail damage assessment, insurance claim coordination, wind-rated installations, and storm-resistant material systems built for North Texas weather.
+When choosing a roofing contractor in the Dallas-Fort Worth metro area, look for professionals experienced with hail damage assessment, insurance claim coordination, wind-rated installations, and storm-resistant material systems built for North Texas weather.

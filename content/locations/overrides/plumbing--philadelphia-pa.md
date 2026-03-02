@@ -1,6 +1,6 @@
 ---
 title: "Plumbing Services in Philadelphia, PA"
-description: "Find trusted plumbing professionals in Philadelphia, PA. Licensed plumbers experienced with aging infrastructure, lead pipe remediation, and winter freeze prevention in Philly's older homes."
+description: "Philadelphia plumbing guide — aging infrastructure, lead pipe remediation, and winter freeze prevention for Philly's older homes. Costs and hiring tips."
 ---
 
 ## Plumbing Services for Philadelphia's Historic Homes
@@ -69,6 +69,6 @@ The City of Philadelphia requires a plumbing permit for most work beyond basic f
 4. **Know the row home implications** -- If you plan major plumbing work in a row home, discuss the project scope with your neighbors early. Shared walls and stacked plumbing can mean your project affects their unit.
 5. **Keep PWD's emergency number handy** -- For water main breaks and sewer backups on the city side, call PWD at 215-685-6300. For issues on your side of the property line, call a licensed plumber.
 
-## Find a Philadelphia Plumbing Professional
+## Hiring a Plumber in Philadelphia
 
-Get free quotes from licensed, insured plumbing contractors in the Philadelphia metro area. Our network includes professionals experienced with lead pipe remediation, row home plumbing, cast iron replacement, and winter freeze prevention throughout the Greater Philadelphia region.
+When choosing a plumber in Philadelphia, look for professionals experienced with lead pipe remediation, row home plumbing, cast iron replacement, and winter freeze prevention throughout the Greater Philadelphia region.

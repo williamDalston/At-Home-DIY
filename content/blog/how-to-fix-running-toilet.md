@@ -153,7 +153,7 @@ Most running toilet problems can be solved with basic tools and a hardware store
 - **Multiple fixes have not worked.** If you have replaced the flapper, adjusted the float, and swapped the fill valve without success, a plumber can identify less obvious issues like a warped valve seat.
 - **The shut-off valve will not turn.** Do not force it -- it may break and cause a flood. A plumber can replace the valve safely.
 
-If you need help finding a qualified plumber, [request a free quote through our contact page](/contact?service=plumbing).
+If you have questions about your plumbing situation, [reach out through our contact page](/contact?service=plumbing) and we will help point you in the right direction.
 
 ## Quick-Reference Summary
 

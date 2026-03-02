@@ -182,7 +182,7 @@ Not every garage door repair is a DIY project. Call a qualified garage door tech
 - **Complete opener replacement.** A new opener installed by a professional costs $250 to $550 and includes setup, programming, and disposal of the old unit.
 - **Any situation where you are unsure.** A garage door is the largest moving object in most homes. When in doubt, bring in a professional.
 
-[Get a free quote from qualified garage door professionals in your area](/contact) to compare pricing before scheduling service.
+Have questions about your garage door issue? [Contact us](/contact) and we will help point you in the right direction.
 
 ## Garage Door Repair Cost Reference
 

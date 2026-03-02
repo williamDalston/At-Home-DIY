@@ -1,6 +1,6 @@
 ---
 title: "HVAC Services in Phoenix, AZ"
-description: "Find trusted HVAC professionals in Phoenix, AZ. Expert air conditioning installation, repair, and maintenance for extreme desert heat exceeding 115 degrees Fahrenheit."
+description: "Phoenix HVAC guide — air conditioning installation, repair, and maintenance for extreme desert heat exceeding 115 degrees. Costs, tips, and what to know."
 ---
 
 ## HVAC Services Engineered for Phoenix's Extreme Heat
@@ -66,6 +66,6 @@ The extreme operating hours and harsh conditions demand rigorous maintenance:
 4. **Address ductwork first** -- Before replacing an aging AC system, have your ductwork inspected and sealed. Putting a new high-efficiency system on leaky ducts is like pouring water into a bucket with holes.
 5. **Plan replacement before failure** -- Phoenix AC systems fail most often during the first extreme heat wave of the season, when demand for HVAC contractors peaks and wait times stretch to days. If your system is 12-15 years old, plan proactive replacement during the spring when contractors have availability and may offer pre-season pricing.
 
-## Find a Phoenix HVAC Professional
+## Hiring an HVAC Contractor in Phoenix
 
-Get free quotes from licensed, insured HVAC contractors in the Phoenix metro area. Our network includes professionals experienced with extreme heat system design, high-SEER installations, ductwork optimization, and maintenance programs built for the demands of the Sonoran Desert climate.
+When choosing an HVAC contractor in Phoenix, look for professionals experienced with extreme heat system design, high-SEER installations, ductwork optimization, and maintenance programs built for the demands of the Sonoran Desert climate.

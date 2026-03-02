@@ -190,4 +190,4 @@ A well-built fence adds tangible value to your property. Privacy fences are cons
 
 Beyond resale value, a fence improves your daily use of outdoor space. A private backyard becomes an extension of your living area. If you are also planning [budget-friendly landscaping improvements](/blog/landscaping-on-a-budget), a new fence provides the backdrop and boundary that ties everything together.
 
-When you are ready to move forward, [request free quotes from licensed fencing professionals in your area](/contact) to compare pricing and find the right contractor for your project.
+When you are ready to move forward, [visit our contact page](/contact) if you have questions about planning your fence project.

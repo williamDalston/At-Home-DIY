@@ -1,6 +1,6 @@
 export const SITE_NAME = "FixIt Finder";
 export const SITE_DESCRIPTION =
-  "Expert DIY guides and local home service professionals. Find trusted contractors, get free quotes, and learn to tackle home projects yourself.";
+  "Expert DIY guides, cost calculators, and home service information for plumbing, electrical, roofing, HVAC, painting, and landscaping.";
 export const BASE_URL = process.env.SITE_URL || "https://www.fixitfinder.space";
 export const CONTACT_EMAIL =
   process.env.CONTACT_EMAIL || "info@alstonanalytics.com";

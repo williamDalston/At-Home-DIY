@@ -38,7 +38,7 @@ export default function RoofingCostEstimatorPage() {
   const data = getCalculatorData();
 
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -51,10 +51,10 @@ export default function RoofingCostEstimatorPage() {
       />
 
       <div className="mx-auto max-w-3xl">
-        <h1 className="text-4xl font-bold text-gray-900">
+        <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
           Roofing Cost Estimator
         </h1>
-        <p className="mt-3 text-lg text-gray-600">
+        <p className="mt-4 text-lg text-gray-600 leading-relaxed">
           Get an instant estimate for your roofing project. Enter your details
           below to see a cost breakdown by materials, labor, and more.
         </p>

@@ -39,7 +39,7 @@ export default function HvacSizingCalculatorPage() {
   const data = getHvacData();
 
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -52,10 +52,10 @@ export default function HvacSizingCalculatorPage() {
       />
 
       <div className="mx-auto max-w-3xl">
-        <h1 className="text-4xl font-bold text-gray-900">
+        <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
           HVAC Sizing Calculator
         </h1>
-        <p className="mt-3 text-lg text-gray-600">
+        <p className="mt-4 text-lg text-gray-600 leading-relaxed">
           Determine the right HVAC system size for your home. Enter your details
           below to see the recommended BTU capacity, tonnage, and estimated cost.
         </p>

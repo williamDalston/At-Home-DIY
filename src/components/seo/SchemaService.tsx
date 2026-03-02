@@ -16,20 +16,24 @@ export function SchemaService({
     <JsonLd
       data={{
         "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType,
+        "@type": "WebPage",
+        name: `${serviceType} Guide`,
         description,
-        provider: {
+        publisher: {
           "@type": "Organization",
           name: SITE_NAME,
           url: BASE_URL,
         },
-        ...(areaServed && {
-          areaServed: {
-            "@type": "City",
-            name: areaServed,
-          },
-        }),
+        about: {
+          "@type": "Service",
+          serviceType,
+          ...(areaServed && {
+            areaServed: {
+              "@type": "City",
+              name: areaServed,
+            },
+          }),
+        },
       }}
     />
   );

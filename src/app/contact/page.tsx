@@ -6,12 +6,12 @@ import { SITE_NAME, CONTACT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: `Get a free quote from trusted home service professionals. Contact ${SITE_NAME} for plumbing, electrical, roofing, HVAC, painting, and landscaping services.`,
+  description: `Have a question about a home project? Contact ${SITE_NAME} for plumbing, electrical, roofing, HVAC, painting, and landscaping inquiries.`,
   keywords: [
-    "free quote",
-    "contact contractor",
-    "home service quote",
-    "request estimate",
+    "contact us",
+    "home service questions",
+    "home project help",
+    "ask a question",
     "hire contractor",
   ],
   alternates: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `Contact Us | ${SITE_NAME}`,
-    description: `Get a free quote from trusted home service professionals. Contact ${SITE_NAME} for plumbing, electrical, roofing, and more.`,
+    description: `Have a question about a home project? Contact ${SITE_NAME} for plumbing, electrical, roofing, and more.`,
     images: [
       {
         url: "/api/og?title=Contact%20Us&subtitle=Get%20a%20free%20quote%20today&category=contact",
@@ -40,7 +40,7 @@ export default async function ContactPage({
   const defaultService = params.service || "";
 
   return (
-    <Container className="py-8">
+    <Container className="py-10 sm:py-12">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
@@ -49,19 +49,19 @@ export default async function ContactPage({
       />
 
       <div className="mx-auto max-w-4xl">
-        <h1 className="text-4xl font-bold text-gray-900">Contact Us</h1>
-        <p className="mt-3 text-lg text-gray-600">
-          Ready to start your project? Fill out the form below and we&apos;ll
-          connect you with licensed professionals in your area.
+        <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">Contact Us</h1>
+        <p className="mt-4 text-lg text-gray-600 max-w-2xl">
+          Have a question about a home project? Fill out the form below
+          and our team will get back to you.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-5">
+        <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-5">
           <div className="lg:col-span-3">
             <ContactForm defaultService={defaultService} />
           </div>
 
           <div className="lg:col-span-2">
-            <div className="rounded-xl bg-gray-50 p-6">
+            <div className="rounded-xl border border-gray-200/80 bg-gray-50 p-6 shadow-sm">
               <h3 className="text-lg font-bold text-gray-900">
                 Other Ways to Reach Us
               </h3>
@@ -85,13 +85,13 @@ export default async function ContactPage({
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-600">
                       2
                     </span>
-                    <span>We match you with local professionals</span>
+                    <span>We review your request and respond</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-600">
                       3
                     </span>
-                    <span>Receive free quotes — no obligation</span>
+                    <span>Receive helpful guidance — no obligation</span>
                   </li>
                 </ol>
               </div>

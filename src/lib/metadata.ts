@@ -30,7 +30,7 @@ export function cityLandingMetadata(
   location: Location
 ): Metadata {
   const title = `${service.frontmatter.title} in ${location.city}, ${location.state}`;
-  const description = `Find trusted ${service.frontmatter.serviceType || service.slug} professionals in ${location.city}, ${location.state}. Licensed, insured, free estimates.`;
+  const description = `${service.frontmatter.title} guide for ${location.city}, ${location.state}. Costs, tips, and what to know before hiring a pro.`;
 
   return {
     title,

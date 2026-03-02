@@ -281,6 +281,6 @@ Start by defining your scope honestly. Decide whether you are doing a cosmetic r
 
 Get at least three detailed written estimates from contractors. Each estimate should break out materials, labor, permits, and disposal separately so you can compare them accurately. Be wary of any bid that is dramatically lower than the others -- it usually means something has been left out.
 
-If you are still in the early planning stages and want to understand how much your specific project might cost, our [free cost estimator](/cost-estimator) can give you a ballpark based on your kitchen size, material choices, and location. And if you are ready to connect with vetted contractors in your area, visit our [contact page](/contact) to request quotes from professionals who specialize in kitchen renovations.
+If you are still in the early planning stages and want to understand how much your specific project might cost, our [free cost estimator](/cost-estimator) can give you a ballpark based on your kitchen size, material choices, and location. Have questions about planning your kitchen remodel? Visit our [contact page](/contact) and we will help point you in the right direction.
 
 A well-planned kitchen remodel -- at any budget level -- is one of the most rewarding projects you can undertake as a homeowner. Take the time to plan thoroughly, budget realistically, and hire the right people for the work that matters most.

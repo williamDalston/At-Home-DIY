@@ -86,7 +86,7 @@ export function MobileNav() {
                 className="block rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-2.5 text-center font-semibold text-white shadow-md shadow-blue-600/20 hover:from-blue-700 hover:to-blue-800"
                 onClick={() => setOpen(false)}
               >
-                Get a Free Quote
+                Contact Us
               </Link>
             </div>
           </nav>
